@@ -1,0 +1,54 @@
+/* Estilos generales */
+.page-container {
+    min-height: 100vh;
+    background-color: #f9fafb; /* bg-gray-50 */
+    padding: 32px; /* p-8 */
+    font-family: sans-serif;
+  }
+  
+  .content-wrapper {
+    max-width: 1280px; /* max-w-7xl */
+    margin: 0 auto;
+  }
+  
+  /* Grid principal */
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr 2fr; /* ProfileCard 1fr y Carousel 2fr */
+    gap: 32px;
+    margin-bottom: 32px; /* Espaciado entre filas */
+  }
+  
+  /* Columnas individuales */
+  .profile-card-column {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .carousel-column {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  /* Sección de detalles debajo del grid */
+  .details-column {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+  }
+  
+  /* Ajustes responsivos */
+  @media (max-width: 767px) {
+    .grid {
+      grid-template-columns: 1fr; /* 1 columna para móviles */
+    }
+  
+    .details-column {
+      gap: 16px;
+    }
+  
+    .page-container {
+      padding: 16px; /* Reduce el padding en móviles */
+    }
+  }
+  

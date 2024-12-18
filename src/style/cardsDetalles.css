@@ -1,0 +1,53 @@
+.card-detalle-container {
+    max-width: 600px;
+    margin: 20px auto;
+    text-align: center;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    background-color: #fff;
+  }
+  
+  .card-detalle-banner img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+  }
+  
+  .card-detalle-avatar {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    margin-top: -60px;
+    border: 4px solid #fff;
+  }
+  
+  .card-detalle-info {
+    padding: 16px;
+  }
+  
+  .card-detalle-info h2 {
+    margin: 10px 0;
+  }
+  
+  .card-detalle-logo img {
+    width: 80px;
+    margin-top: 10px;
+  }
+  
+  .contactar-button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+  
+  .contactar-button:hover {
+    background-color: #0056b3;
+  }
+  

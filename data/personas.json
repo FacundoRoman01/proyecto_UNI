@@ -1,0 +1,162 @@
+[
+  {
+    "id": 1,
+    "name": "Rocky Chen",
+    "university": "University Da vinci",
+    "avatar": "src/img/avatar1.png",
+    "banner": "src/img/banner1.jpg",
+    "companyLogo": "src/img/davinci.png",
+    "services": ["Marketing Online", "Desarrollo Web", "Consultoría"],
+    "about": "Soy un profesional con más de 10 años de experiencia en marketing digital y desarrollo web. He trabajado con empresas globales para potenciar su presencia online, optimizando estrategias y acompañando su crecimiento en el mercado digital.",
+    "contact": "juanperez@example.com",
+    "images": [
+      "https://via.placeholder.com/800x400?text=Banner1",
+      "https://via.placeholder.com/800x400?text=Banner1",
+      "https://via.placeholder.com/800x400?text=Banner1"
+    ]
+  },
+  {
+    "id": 2,
+    "name": "Jane Doe",
+    "university": "UADE",
+    "avatar": "src/img/avatar1.png",
+    "banner": "src/img/banner2.jpg",
+    "companyLogo": "src/img/uade.png",
+    "services": ["Marketing Online", "Desarrollo Web", "Consultoría"],
+    "about": "Especialista en estrategias de marketing digital con enfoque en comercio electrónico. He implementado soluciones integrales para empresas que buscan optimizar su gestión y aumentar su alcance online.",
+    "contact": "juanperez@example.com",
+    "images": [
+      "https://via.placeholder.com/800x400?text=Banner1",
+      "https://via.placeholder.com/800x400?text=Banner1",
+      "https://via.placeholder.com/800x400?text=Banner1"
+    ]
+  },
+  {
+    "id": 3,
+    "name": "Maria Gomez",
+    "university": "MIT",
+    "avatar": "src/img/avatar1.png",
+    "banner": "src/img/banner3.jpg",
+    "companyLogo": "src/img/davinci.png",
+    "services": ["Marketing Online", "Desarrollo Web", "Consultoría"],
+    "about": "Cuento con amplia experiencia en desarrollo de estrategias web B2C y B2B, logrando conectar plataformas digitales con soluciones ERP y marketplaces. Mi objetivo es facilitar la gestión y el crecimiento de negocios online.",
+    "contact": "juanperez@example.com",
+    "images": [
+      "https://via.placeholder.com/800x400?text=Banner1",
+      "https://via.placeholder.com/800x400?text=Banner1",
+      "https://via.placeholder.com/800x400?text=Banner1"
+    ]
+  },
+  {
+    "id": 4,
+    "name": "John Smith",
+    "university": "University of Palermo",
+    "avatar": "src/img/avatar1.png",
+    "banner": "src/img/banner4.jpg",
+    "companyLogo": "src/img/up.jpg",
+    "services": ["Marketing Online", "Desarrollo Web", "Consultoría"],
+    "about": "Consultor senior en marketing digital y tecnología con experiencia en la implementación de soluciones innovadoras. Ayudo a las empresas a optimizar sus recursos y alcanzar el éxito en entornos digitales.",
+    "contact": "juanperez@example.com",
+    "images": [
+      "https://via.placeholder.com/800x400?text=Banner1",
+      "https://via.placeholder.com/800x400?text=Banner1",
+      "https://via.placeholder.com/800x400?text=Banner1"
+    ]
+  },
+  {
+    "id": 5,
+    "name": "Laura Martinez",
+    "university": "Stanford University",
+    "avatar": "src/img/avatar1.png",
+    "banner": "src/img/banner5.jpg",
+    "companyLogo": "src/img/davinci.png",
+    "services": ["Marketing Online", "Software", "Analista en sistemas"],
+    "about": "Líder en el desarrollo e integración de soluciones de software para eCommerce. Aplico estrategias innovadoras que permiten ahorrar hasta un 80% del tiempo de gestión y potenciar negocios digitales de manera integral.",
+    "contact": "juanperez@example.com",
+    "images": [
+      "https://via.placeholder.com/800x400?text=Banner1",
+      "https://via.placeholder.com/800x400?text=Banner1",
+      "https://via.placeholder.com/800x400?text=Banner1"
+    ]
+  },
+  {
+    "id": 6,
+    "name": "Carlos Perez",
+    "university": "University of Palermo",
+    "avatar": "src/img/avatar1.png",
+    "banner": "src/img/banner6.jpg",
+    "companyLogo": "src/img/up.jpg",
+    "services": ["Marketing Online", "Desarrollo Web", "Consultoría"],
+    "about": "Profesional en desarrollo web y estrategias de marketing con foco en la consultoría empresarial. Trabajo en conjunto con las empresas para garantizar resultados efectivos y posicionar sus marcas en el mercado digital.",
+    "contact": "juanperez@example.com",
+    "images": [
+      "https://via.placeholder.com/800x400?text=Banner1",
+      "https://via.placeholder.com/800x400?text=Banner1",
+      "https://via.placeholder.com/800x400?text=Banner1"
+    ]
+  },
+  {
+    "id": 7,
+    "name": "Antonio Ruiz",
+    "university": "University of Barcelona",
+    "avatar": "src/img/avatar1.png",
+    "banner": "src/img/banner5.jpg",
+    "companyLogo": "src/img/davinci.png",
+    "services": ["Consultoría", "Desarrollo de Software", "Estrategias de Marketing"],
+    "about": "Experto en crear soluciones digitales que optimizan los procesos de negocios. He trabajado con diversas empresas ayudándolas a mejorar su eficiencia y a lograr un crecimiento sostenido.",
+    "contact": "antonio@example.com",
+    "images": [
+      "https://via.placeholder.com/800x400?text=Banner7",
+      "https://via.placeholder.com/800x400?text=Banner7",
+      "https://via.placeholder.com/800x400?text=Banner7"
+    ]
+  },
+  {
+    "id": 8,
+    "name": "Sofia Lopez",
+    "university": "University of Buenos Aires",
+    "avatar": "src/img/avatar1.png",
+    "banner": "src/img/banner2.jpg",
+    "companyLogo": "src/img/davinci.png",
+    "services": ["Marketing Digital", "Consultoría", "Gestión de Proyectos"],
+    "about": "Consultora en marketing digital con especialización en posicionamiento SEO y estrategias en redes sociales. Ayudo a las empresas a tener mayor visibilidad online y a aumentar sus conversiones.",
+    "contact": "sofia@example.com",
+    "images": [
+      "https://via.placeholder.com/800x400?text=Banner8",
+      "https://via.placeholder.com/800x400?text=Banner8",
+      "https://via.placeholder.com/800x400?text=Banner8"
+    ]
+  },
+  {
+    "id": 9,
+    "name": "Luis Fernandez",
+    "university": "University of La Plata",
+    "avatar": "src/img/avatar1.png",
+    "banner": "src/img/banner1.jpg",
+    "companyLogo": "src/img/davinci.png",
+    "services": ["Marketing Online", "Desarrollo Web", "Consultoría"],
+    "about": "Desarrollador web y consultor en marketing online con más de 5 años de experiencia en proyectos para empresas en diversas industrias. Me enfoco en crear soluciones digitales escalables y efectivas.",
+    "contact": "luis@example.com",
+    "images": [
+      "https://via.placeholder.com/800x400?text=Banner9",
+      "https://via.placeholder.com/800x400?text=Banner9",
+      "https://via.placeholder.com/800x400?text=Banner9"
+    ]
+  },
+  {
+    "id": 10,
+    "name": "Marta Rodríguez",
+    "university": "National University of San Juan",
+    "avatar": "src/img/avatar1.png",
+    "banner": "src/img/banner6.jpg",
+    "companyLogo": "src/img/davinci.png",
+    "services": ["Desarrollo Web", "Consultoría", "Gestión de Contenidos"],
+    "about": "Consultora en tecnologías digitales con enfoque en desarrollo web y optimización de contenidos. Me especializo en crear sitios web y plataformas que impulsan la productividad y el éxito online.",
+    "contact": "marta@example.com",
+    "images": [
+      "https://via.placeholder.com/800x400?text=Banner10",
+      "https://via.placeholder.com/800x400?text=Banner10",
+      "https://via.placeholder.com/800x400?text=Banner10"
+    ]
+  }
+]

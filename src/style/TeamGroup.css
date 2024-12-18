@@ -1,0 +1,42 @@
+.team-group {
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+}
+
+.team-avatar {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-size: cover;
+  background-position: center;
+  border: 2px solid white;
+  margin-left: -15px;
+  z-index: 1;
+  cursor: pointer;
+}
+
+.team-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin: 20px;/* Espacio entre el título y los avatares */
+  text-align: center;
+}
+
+.team-avatar:first-child {
+  margin-left: 0; /* El primer avatar no tiene margen negativo */
+}
+
+.team-avatar.emoji {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f2f2f2;
+  font-size: 24px;
+}
+
+.team-avatar:hover{
+  transform: scale(1.2);
+  transition: all 0.5s ease;
+}

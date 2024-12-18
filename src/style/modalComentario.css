@@ -1,0 +1,186 @@
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+  
+  .modal-content {
+    background: white;
+    border-radius: 12px;
+    padding: 24px;
+    width: 100%;
+    max-width: 500px;
+    position: relative;
+    animation: modalAppear 0.3s ease;
+  }
+  
+  @keyframes modalAppear {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+  }
+  
+  .modal-header h2 {
+    font-size: 24px;
+    font-weight: 600;
+    color: #333;
+    margin: 0;
+  }
+  
+  .close-button {
+    background: none;
+    border: none;
+    color: #666;
+    cursor: pointer;
+    padding: 4px;
+    border-radius: 50%;
+    transition: background-color 0.2s;
+  }
+  
+  .close-button:hover {
+    background-color: #f5f5f5;
+  }
+  
+  .rating-section {
+    margin-bottom: 24px;
+  }
+  
+  .rating-instruction {
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 16px;
+  }
+  
+  .required {
+    color: #0046BE;
+    margin-left: 4px;
+  }
+  
+  .rating-options {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+  }
+  
+  .rating-button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    padding: 16px;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    background: none;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+  
+  .rating-button:hover {
+    border-color: #0046BE;
+  }
+  
+  .rating-button.active {
+    border-color: #0046BE;
+    background-color: #f0f7ff;
+  }
+  
+  .emoji {
+    font-size: 24px;
+  }
+  
+  .rating-label {
+    font-size: 14px;
+    color: #666;
+  }
+  
+  .rating-button.active .rating-label {
+    color: #0046BE;
+  }
+  
+  .comment-section {
+    margin-bottom: 24px;
+  }
+  
+  .comment-section label {
+    display: block;
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 8px;
+  }
+  
+  textarea {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    font-size: 14px;
+    resize: vertical;
+    min-height: 100px;
+    transition: border-color 0.2s;
+  }
+  
+  textarea:focus {
+    outline: none;
+    border-color: #0046BE;
+  }
+  
+  .submit-button {
+    width: 100%;
+    padding: 14px;
+    background-color: #0046BE;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.2s;
+  }
+  
+  .submit-button:hover {
+    background-color: #003399;
+  }
+  
+  .submit-button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+  }
+  
+  @media (max-width: 640px) {
+    .modal-content {
+      margin: 16px;
+      padding: 20px;
+    }
+  
+    .rating-options {
+      flex-direction: column;
+      gap: 8px;
+    }
+  
+    .rating-button {
+      flex-direction: row;
+      justify-content: center;
+      padding: 12px;
+    }
+  }
+  
+  

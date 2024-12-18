@@ -1,0 +1,141 @@
+  .featured-section {
+    padding: 48px 24px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .featured-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 32px;
+    
+    font-family: sans-serif;
+  }
+  
+  .webflow-logo {
+    height: 36px;
+    width: auto;
+  }
+  
+  .portfolio-card {
+    background-color: #0046BE;
+    border-radius: 24px;
+    padding: 48px;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 48px;
+    overflow: hidden;
+    color: white;
+  }
+  
+  .portfolio-info {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+  
+  .social-icon {
+    background: rgba(255, 255, 255, 0.1);
+    width: 40px;
+    height: 40px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .linkedin-icon {
+    width: 24px;
+    height: 24px;
+    filter: brightness(0) invert(1);
+  }
+  
+  .portfolio-url {
+    color: white;
+    text-decoration: none;
+    font-size: 24px;
+    font-weight: 500;
+  }
+  
+  .portfolio-url:hover {
+    text-decoration: underline;
+  }
+  
+  .profile {
+    margin-top: auto;
+    display: flex;
+    gap: 16px;
+    align-items: center;
+  }
+  
+  .profile-image {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+  
+  .profile-details h2 {
+    font-size: 20px;
+    font-weight: 600;
+    margin: 0;
+    color: #fff;
+  }
+  
+  .profile-details p {
+    font-size: 16px;
+   
+    color: #fff !important;
+    margin: 4px 0 0 0;
+  }
+  
+  .portfolio-preview {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    min-height: 400px;
+  }
+  
+  .preview-image {
+    width: 100%;
+    height: 420px;
+    object-fit: cover;
+    border-radius: 12px;
+  }
+  
+  @media (max-width: 968px) {
+    .portfolio-card {
+      grid-template-columns: 1fr;
+      padding: 32px;
+    }
+  
+    .portfolio-preview {
+      min-height: 300px;
+    }
+  
+    .featured-title {
+      font-size: 24px;
+      flex-direction: column;
+      text-align: center;
+    }
+  }
+  
+  @media (max-width: 640px) {
+    .featured-section {
+      padding: 24px 16px;
+    }
+  
+    .portfolio-card {
+      padding: 24px;
+    }
+  
+    .portfolio-url {
+      font-size: 20px;
+    }
+  }
+  
+  

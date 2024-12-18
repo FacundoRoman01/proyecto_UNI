@@ -1,0 +1,89 @@
+.sidebar {
+   
+    height: 100vh;
+    background-color: #ffffff;
+   
+    padding: 16px 0;
+    font-family: sans-serif;
+  }
+  
+  .tabs {
+    display: flex;
+    gap: 12px;
+    padding: 0 16px;
+    margin-bottom: 24px;
+  }
+  
+  .tab {
+    padding: 8px 16px;
+    border-radius: 9999px;
+    font-size: 14px;
+    font-weight: 500;
+    text-decoration: none;
+    color: #6b7280;
+    transition: all 0.2s ease;
+  }
+  
+  .tab:hover {
+    background-color: #f3f4f6;
+  }
+  
+  .tab.active {
+    background-color: #000000;
+    color: #ffffff;
+  }
+  
+  .companies-list {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .company-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px 16px;
+    text-decoration: none;
+    color: #374151;
+    transition: background-color 0.2s ease;
+  }
+  
+  .company-item:hover {
+    background-color: #f3f4f6;
+  }
+  
+  .company-info {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  
+  .company-logo {
+    width: 24px;
+    height: 24px;
+    background-color: #f3f4f6;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .Company_logoTipo{
+    border-radius: 50px;
+    opacity: 0.8;
+  }
+  
+  .company-name {
+    font-size: 14px;
+    color: #6b7280;
+  }
+  
+  .company-count {
+    font-size: 14px;
+    color: #9ca3af;
+  }
+  
+  .company-item:hover .company-name {
+    color: #111827;
+  }
+  
+  

@@ -1,0 +1,115 @@
+.profile-card {
+    width: 100%;
+    max-width: 400px; /* Reducido el tamaño máximo */
+    padding: 0px !important;
+    border-radius: 16px; /* Ajuste para una esquina más suave */
+    overflow: hidden;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    margin: 18px;
+    
+  }
+
+  .banner {
+    width: 100%;
+    aspect-ratio: 50/30;
+   background-color: #f4f5f6;
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 1.7rem;
+  }
+
+  .banner-content img {
+    width: 100%;
+    height: 200px; /* Ajusta la altura como necesites */
+    object-fit: cover; /* Esto asegura que la imagen mantenga su aspecto sin distorsionarse */
+  }
+  
+  
+  .banner-content {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 1rem; /* Reducido el tamaño de la fuente */
+  }
+  
+  .profile-info {
+    display: flex;
+    align-items: center;
+    padding: 0.75rem 1rem; /* Reducido el padding */
+    gap: 0.5rem; /* Reducido el espacio entre los elementos */
+    background-color: #f4f5f6;
+  }
+  
+  .profile-avatar {
+    flex-shrink: 0;
+  }
+  
+  .avatar {
+    width: 40px; /* Reducido el tamaño del avatar */
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+  
+  .profile-details {
+    flex-grow: 1;
+  }
+  
+  .profile-details h2 {
+    font-size: 0.875rem; /* Reducido el tamaño de la fuente */
+    font-weight: 500;
+    color: #000;
+    margin: 0;
+    line-height: 1.5;
+  }
+  
+  .profile-details p {
+    font-size: 0.75rem; /* Reducido el tamaño de la fuente */
+    color: #666 !important;
+    margin: 0;
+    line-height: 1.5;
+  }
+  
+  .empresa-logo{
+    flex-shrink: 1;
+    opacity: 0.7;
+  }
+  
+  .empresa-icon {
+    width: 50px; /* Reducido el tamaño del ícono */
+    height: 50px;
+    border-radius: 50px;
+  }
+  
+  @media (max-width: 640px) {
+    .profile-card {
+      border-radius: 12px; /* Ajuste adicional para pantallas pequeñas */
+    }
+  
+    .banner {
+      padding: 0.75rem; /* Ajustado el padding para pantallas pequeñas */
+    }
+  
+    .profile-info {
+      padding: 0.5rem 1rem; /* Ajuste de padding */
+      gap: 0.25rem; /* Menos espacio en pantallas pequeñas */
+    }
+  
+    .avatar {
+      width: 36px; /* Ajuste de tamaño del avatar */
+      height: 36px;
+    }
+  
+    .profile-details h2 {
+      font-size: 0.75rem; /* Ajuste para títulos más pequeños */
+    }
+  
+    .profile-details p {
+      font-size: 0.625rem; /* Ajuste para el texto más pequeño */
+    }
+  
+    .empresa-icon {
+      width: 18px; /* Ajuste para el ícono en pantallas pequeñas */
+      height: 18px;
+    }
+  }
+  

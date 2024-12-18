@@ -1,0 +1,22 @@
+/* Eliminar cualquier margen en el contenedor */
+
+/* .container-fluid{
+  margin-right:15px ;
+} */
+
+/* Sidebar */
+.sidebar {
+  background-color: #f8f9fa; /* Color de fondo */
+  padding: 1rem; /* Ajuste de padding */
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: sticky; /* Hace que el sidebar se quede fijo al hacer scroll */
+  top: 0; /* Ajusta la posición cuando se hace scroll */
+}
+
+/* Contenedor de las Cards */
+.cards-container {
+  margin-top: 0; /* Elimina el margen negativo */
+  padding: 1rem;
+  border-radius: 8px;
+}

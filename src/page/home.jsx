@@ -1,22 +1,27 @@
 import Header from "../components/header.jsx";
 import Hero from "../components/hero.jsx";
 import Cards from "../components/cards.jsx";
-// import Tarjeta_detallada from "../components/tarjeta_detallada.jsx";
 import Footer from "../components/footer.jsx";
 import CardAleatorio from "../components/cardAleatorio.jsx";
-const home = () => {
+import { Link } from "react-router-dom";
+import "../style/home.css";
+
+const Home = () => {
   return (
     <div>
-        <Header />
-        <Hero />
-        <CardAleatorio />
-        <Cards isHomePage={true} limit={6} />
-        <Footer />
-
-        {/* <Tarjeta_detallada /> */}
-        
+      <Header />
+      <Hero />
+      <CardAleatorio />
+      {/* Aquí estamos limitando las tarjetas a 6 */}
+      <Cards isHomePage={true} limit={6} />
+      <div className="btn-mas-cards">
+        <Link to={"/portfolio"} className="btn-link">
+          Ver más
+        </Link>
+      </div>
+      <Footer />
     </div>
-  )
-}
+  );
+};
 
-export default home
+export default Home;

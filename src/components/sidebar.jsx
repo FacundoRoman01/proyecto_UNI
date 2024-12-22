@@ -1,58 +1,54 @@
+import "../style/sidebar.css";
+import personasData from "../../data/personas.json"; // Asume que el archivo JSON está en la carpeta 'data'
 
-import { Link } from 'react-router-dom';
-import "../style/sidebar.css"; // Importa los estilos del componente
+const Sidebar = ({ onFilterChange }) => {
+  // Obtener las universidades únicas
+  const universities = [
+    ...new Set(personasData.map((prof) => prof.university)) // Filtrar las universidades únicas
+  ];
 
-const companies = [
-  { name: 'UADE', count: 33, logo: 'src/img/uade.png' },
-  { name: 'UP', count: 22, logo: 'src/img/uade.png' },
-  { name: 'Da vinci', count: 12, logo: 'src/img/davinci.png' },
-  { name: 'Kennedy', count: 11, logo: 'src/img/uade.png' },
-  { name: 'UTN', count: 9, logo: 'src/img/davinci.png' },
-  { name: 'PALERMO', count: 7, logo: 'src/img/uade.png' },
-  { name: 'CODERHOUSE', count: 7, logo: 'src/img/davinci.png' },
-  { name: 'SIGLO21', count: 6, logo: 'src/img/uade.png' },
-  { name: 'UNIVERSIDAD PINAMAR', count: 5, logo: 'src/img/uade.png' },
-  { name: 'UNI', count: 4, logo: 'src/img/davinci.png' },
-];
-
-const sidebar = () => {
   return (
     <aside className="sidebar">
       <div className="tabs">
-        {/* <Link to="/companies" className="tab active">
-          Companies
-        </Link>
-        <Link to="/colleges" className="tab">
-          Colleges
-        </Link> */}
         <h4>Universidades</h4>
       </div>
 
       <div className="companies-list">
-        {companies.map((company) => (
-          <Link
-            to={`/companies/${company.name.toLowerCase()}`}
-            key={company.name}
+        {/* Botón "Todos" para mostrar todas las tarjetas */}
+        <div
+          className="company-item"
+          onClick={() => onFilterChange(null)} // Pasa null para mostrar todas las tarjetas
+        >
+          <div className="company-info">
+            <span className="company-name">Todos</span>
+          </div>
+        </div>
+
+        {/* Mostrar universidades */}
+        {universities.map((university) => (
+          <div
+            key={university}
             className="company-item"
+            onClick={() => onFilterChange(university)} // Llamar a la función onFilterChange al seleccionar una universidad
           >
             <div className="company-info">
               <div className="company-logo">
+                {/* Mostrar logo de la universidad */}
                 <img
-                  className='Company_logoTipo'
-                  src={company.logo}
-                  alt={`${company.name} logo`}
+                  className="Company_logoTipo"
+                  src={personasData[0].companyLogo} // Usar el logo de la primera universidad (personaliza esto según lo necesites)
+                  alt={`${university} logo`}
                   width={40}
                   height={30}
                 />
               </div>
-              <span className="company-name">{company.name}</span>
+              <span className="company-name">{university}</span>
             </div>
-            <span className="company-count">{company.count}</span>
-          </Link>
+          </div>
         ))}
       </div>
     </aside>
   );
 };
 
-export default sidebar;
+export default Sidebar;

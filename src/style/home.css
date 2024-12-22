@@ -1,0 +1,35 @@
+/* Estilo del contenedor del botón */
+.btn-mas-cards {
+    display: flex;
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
+    margin: 20px 0; /* Espaciado superior e inferior */
+  }
+  
+  /* Estilo del botón */
+  .btn-link {
+    display: inline-block; /* Permite el padding y centrado del enlace */
+    padding: 12px 24px; /* Espaciado interno del botón */
+    font-size: 16px; /* Tamaño de la fuente */
+    font-weight: bold; /* Texto en negrita */
+    color: #fff; /* Color del texto */
+    background-color: #0066cc; /* Color de fondo */
+    border: none; /* Sin borde */
+    border-radius: 8px; /* Bordes redondeados */
+    text-align: center; /* Asegura que el texto esté centrado */
+    text-decoration: none; /* Elimina el subrayado */
+    transition: background-color 0.3s ease; /* Animación suave para hover */
+  }
+  
+  .btn-link:hover {
+    color: #fff; /* Color de fondo en hover */
+  }
+  
+  .btn-link:focus {
+    outline: none; /* Elimina el borde de enfoque */
+  }
+  
+  .btn-link:active {
+    background-color: #004a99; /* Color de fondo al hacer clic */
+  }
+  

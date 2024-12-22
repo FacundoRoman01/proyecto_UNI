@@ -1,36 +1,34 @@
-import "../style/card.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import personasData from "../../data/personas.json";
 import PropTypes from "prop-types";
+import personasData from "../../data/personas.json"; // Cargar los datos de las personas
+import "../style/card.css";
 
-const Cards = ({ limit = personasData.length, isHomePage = false }) => {
+const Cards = ({ universidad, limit }) => {
   const [personas, setPersonas] = useState([]);
   const navigate = useNavigate();
 
   useEffect(() => {
-    let personasToDisplay = personasData;
+    // Filtrar las personas según la universidad, si no hay filtro, mostrar todas
+    const filteredPersonas = universidad
+      ? personasData.filter((persona) => persona.university === universidad)
+      : personasData;
 
-    // Si estamos en la página de inicio, mezclamos las tarjetas
-    if (isHomePage) {
-      personasToDisplay = [...personasData].sort(() => Math.random() - 0.5);
-    }
-
-    setPersonas(personasToDisplay);
-  }, [isHomePage]);
+    setPersonas(filteredPersonas);
+  }, [universidad]);
 
   const handleClick = (personaId) => {
     navigate(`/detalle/${personaId}`);
   };
 
-  // Limitar la cantidad de personas a mostrar según el valor de "limit"
-  const personasLimitadas = personas.slice(0, limit);
+  // Aplicar límite solo si se proporciona y es mayor que 0
+  const personasAMostrar = limit > 0 ? personas.slice(0, limit) : personas;
 
   return (
     <div className="container">
       <div className="row">
-        {personasLimitadas.map((persona) => (
+        {personasAMostrar.map((persona) => (
           <div key={persona.id} className="col-md-4 mb-4">
             <div
               className="profile-card"
@@ -68,8 +66,12 @@ const Cards = ({ limit = personasData.length, isHomePage = false }) => {
 
 // Validación de las propiedades usando PropTypes
 Cards.propTypes = {
-  limit: PropTypes.number, // Se acepta un valor opcional que limita la cantidad de tarjetas mostradas
-  isHomePage: PropTypes.bool, // Se pasa como propiedad para determinar si se debe aleatorizar
+  universidad: PropTypes.string, // Universidad para filtrar
+  limit: PropTypes.number, // Límite de tarjetas a mostrar
+};
+
+Cards.defaultProps = {
+  limit: 0, // Predeterminado: muestra todas las tarjetas
 };
 
 export default Cards;

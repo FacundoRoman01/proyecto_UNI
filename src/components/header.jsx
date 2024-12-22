@@ -1,19 +1,19 @@
-import { useState } from "react";
+// import { useState } from "react";
 import { Link } from "react-router-dom";
 import "../style/header.css";
 
 
 const Header = () => {
-  const [activeTab, setActiveTab] = useState("Emprendedores");
+  // const [activeTab, setActiveTab] = useState("Emprendedores");
 
-  const handleTabChange = (tab) => {
-    setActiveTab(tab);
-  };
+  // const handleTabChange = (tab) => {
+  //   setActiveTab(tab);
+  // };
 
   return (
     <header className="header">
       {/* Parte superior del header */}
-      <div className="header-top">
+      {/* <div className="header-top">
         <Link
           to=""
           className={`tab ${activeTab === "Emprendedores" ? "active" : ""}`}
@@ -29,7 +29,7 @@ const Header = () => {
         >
           Grandes agencias
         </Link>
-      </div>
+      </div> */}
 
       {/* Barra de navegación principal */}
       <nav className="header-nav">

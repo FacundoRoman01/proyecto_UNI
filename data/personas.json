@@ -1,7 +1,7 @@
 [
   {
     "id": 1,
-    "name": "Rocky Chen",
+    "name": "facundo roman",
     "university": "University Da vinci",
     "avatar": "src/img/avatar1.png",
     "banner": "src/img/banner1.jpg",
@@ -157,6 +157,38 @@
       "https://via.placeholder.com/800x400?text=Banner10",
       "https://via.placeholder.com/800x400?text=Banner10",
       "https://via.placeholder.com/800x400?text=Banner10"
+    ]
+  },
+  {
+    "id": 11,
+    "name": "agustin roman",
+    "university": "University Da vinci",
+    "avatar": "src/img/avatar1.png",
+    "banner": "src/img/banner6.jpg",
+    "companyLogo": "src/img/davinci.png",
+    "services": ["Marketing Online", "Desarrollo Web", "Consultoría"],
+    "about": "Soy un profesional con más de 10 años de experiencia en marketing digital y desarrollo web. He trabajado con empresas globales para potenciar su presencia online, optimizando estrategias y acompañando su crecimiento en el mercado digital.",
+    "contact": "juanperez@example.com",
+    "images": [
+      "https://via.placeholder.com/800x400?text=Banner1",
+      "https://via.placeholder.com/800x400?text=Banner1",
+      "https://via.placeholder.com/800x400?text=Banner1"
+    ]
+  },
+  {
+    "id": 12,
+    "name": "pablo roman",
+    "university": "University Da vinci",
+    "avatar": "src/img/avatar1.png",
+    "banner": "src/img/banner2.jpg",
+    "companyLogo": "src/img/davinci.png",
+    "services": ["Marketing Online", "Desarrollo Web", "Consultoría"],
+    "about": "Soy un profesional con más de 10 años de experiencia en marketing digital y desarrollo web. He trabajado con empresas globales para potenciar su presencia online, optimizando estrategias y acompañando su crecimiento en el mercado digital.",
+    "contact": "juanperez@example.com",
+    "images": [
+      "https://via.placeholder.com/800x400?text=Banner1",
+      "https://via.placeholder.com/800x400?text=Banner1",
+      "https://via.placeholder.com/800x400?text=Banner1"
     ]
   }
 ]

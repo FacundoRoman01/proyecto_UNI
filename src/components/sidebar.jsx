@@ -25,27 +25,37 @@ const Sidebar = ({ onFilterChange }) => {
         </div>
 
         {/* Mostrar universidades */}
-        {universities.map((university) => (
-          <div
-            key={university}
-            className="company-item"
-            onClick={() => onFilterChange(university)} // Llamar a la función onFilterChange al seleccionar una universidad
-          >
-            <div className="company-info">
-              <div className="company-logo">
-                {/* Mostrar logo de la universidad */}
-                <img
-                  className="Company_logoTipo"
-                  src={personasData[0].companyLogo} // Usar el logo de la primera universidad (personaliza esto según lo necesites)
-                  alt={`${university} logo`}
-                  width={40}
-                  height={30}
-                />
+        {universities.map((university) => {
+          // Filtrar el logo de la universidad
+          const universityData = personasData.find(
+            (prof) => prof.university === university
+          );
+          const universityLogo = universityData ? universityData.companyLogo : null;
+
+          return (
+            <div
+              key={university}
+              className="company-item"
+              onClick={() => onFilterChange(university)} // Llamar a la función onFilterChange al seleccionar una universidad
+            >
+              <div className="company-info">
+                <div className="company-logo">
+                  {/* Mostrar logo de la universidad */}
+                  {universityLogo && (
+                    <img
+                      className="Company_logoTipo"
+                      src={universityLogo} // Usar el logo de la universidad correspondiente
+                      alt={`${university} logo`}
+                      width={40}
+                      height={30}
+                    />
+                  )}
+                </div>
+                <span className="company-name">{university}</span>
               </div>
-              <span className="company-name">{university}</span>
             </div>
-          </div>
-        ))}
+          );
+        })}
       </div>
     </aside>
   );

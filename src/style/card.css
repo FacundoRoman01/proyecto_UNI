@@ -65,8 +65,10 @@
  .profile-details p {
     font-size: 0.75rem; 
     /* color: #000 !important; */
+    
     margin: 0;
     line-height: 1.5;
+    
   }
   
    

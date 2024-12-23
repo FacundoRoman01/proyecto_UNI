@@ -1,6 +1,9 @@
 import "../style/sidebar.css";
 import personasData from "../../data/personas.json"; // Asume que el archivo JSON está en la carpeta 'data'
 
+// Importa Font Awesome
+import { FaUsers } from "react-icons/fa";
+
 const Sidebar = ({ onFilterChange }) => {
   // Obtener las universidades únicas
   const universities = [
@@ -10,17 +13,20 @@ const Sidebar = ({ onFilterChange }) => {
   return (
     <aside className="sidebar">
       <div className="tabs">
-        <h4>Universidades</h4>
+        <h4>Universidades/Instituto</h4>
       </div>
 
       <div className="companies-list">
-        {/* Botón "Todos" para mostrar todas las tarjetas */}
+        {/* Botón "Todas las Universidades" con un ícono */}
         <div
           className="company-item"
           onClick={() => onFilterChange(null)} // Pasa null para mostrar todas las tarjetas
         >
           <div className="company-info">
-            <span className="company-name">Todos</span>
+            <div className="company-logo">
+              <FaUsers size={24} color="#6b7280" /> {/* Icono de universidad */}
+            </div>
+            <span className="company-name">Todas las Universidades</span>
           </div>
         </div>
 

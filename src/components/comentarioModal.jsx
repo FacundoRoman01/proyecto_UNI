@@ -1,15 +1,15 @@
-import  { useState } from 'react';
+import { useState } from "react";
 import "../style/modalComentario.css";
 
 const ComentarioModal = ({ onClose, onSubmit }) => {
-  const [selectedRating, setSelectedRating] = useState('');
-  const [comment, setComment] = useState('');
+  const [selectedRating, setSelectedRating] = useState("");
+  const [comment, setComment] = useState("");
 
   const handleSubmit = (e) => {
     e.preventDefault();
     onSubmit(selectedRating, comment);
-    setSelectedRating(''); // Reset rating
-    setComment(''); // Reset comment
+    setSelectedRating(""); // Reset rating
+    setComment(""); // Reset comment
     onClose(); // Close modal
   };
 
@@ -18,7 +18,7 @@ const ComentarioModal = ({ onClose, onSubmit }) => {
       <div className="modal-content">
         {/* Modal Header */}
         <div className="modal-header">
-          <h2>Calificación a la agencia</h2>
+          <h2>Apoyo al proyecto</h2>
           <button onClick={onClose} className="close-button">
             X
           </button>
@@ -29,38 +29,38 @@ const ComentarioModal = ({ onClose, onSubmit }) => {
           {/* Rating Section */}
           <div className="rating-section">
             <p className="rating-instruction">
-              Elegí un ícono acorde a tu experiencia
+              ¿Cómo describirías tu experiencia? 
               <span className="required">*</span>
             </p>
             <div className="rating-options">
-              {/* Muy Conforme */}
+              {/* Excelente */}
               <button
                 type="button"
-                className={`rating-button ${selectedRating === 'muy_conforme' ? 'active' : ''}`}
-                onClick={() => setSelectedRating('muy_conforme')}
+                className={`rating-button ${selectedRating === "excelente" ? "active" : ""}`}
+                onClick={() => setSelectedRating("excelente")}
+              >
+                <span className="emoji">🌟</span>
+                <span className="rating-label">Excelente</span>
+              </button>
+
+              {/* Muy bueno */}
+              <button
+                type="button"
+                className={`rating-button ${selectedRating === "muy_bueno" ? "active" : ""}`}
+                onClick={() => setSelectedRating("muy_bueno")}
               >
                 <span className="emoji">😊</span>
-                <span className="rating-label">Muy conforme</span>
+                <span className="rating-label">Muy bueno</span>
               </button>
 
-              {/* Conforme */}
+              {/* Bueno */}
               <button
                 type="button"
-                className={`rating-button ${selectedRating === 'conforme' ? 'active' : ''}`}
-                onClick={() => setSelectedRating('conforme')}
+                className={`rating-button ${selectedRating === "bueno" ? "active" : ""}`}
+                onClick={() => setSelectedRating("bueno")}
               >
-                <span className="emoji">😐</span>
-                <span className="rating-label">Conforme</span>
-              </button>
-
-              {/* Disconforme */}
-              <button
-                type="button"
-                className={`rating-button ${selectedRating === 'disconforme' ? 'active' : ''}`}
-                onClick={() => setSelectedRating('disconforme')}
-              >
-                <span className="emoji">😞</span>
-                <span className="rating-label">Disconforme</span>
+                <span className="emoji">👍</span>
+                <span className="rating-label">Bueno</span>
               </button>
             </div>
           </div>
@@ -76,16 +76,17 @@ const ComentarioModal = ({ onClose, onSubmit }) => {
               onChange={(e) => setComment(e.target.value)}
               required
               rows={4}
+              placeholder="Escribe un mensaje de apoyo..."
             />
           </div>
 
           {/* Submit Button */}
-          <button 
+          <button
             type="submit"
             className="submit-button"
             disabled={!selectedRating || !comment}
           >
-            Enviar calificación
+            Enviar apoyo
           </button>
         </form>
       </div>

@@ -1,62 +1,30 @@
-// import { useState } from "react";
 import { Link } from "react-router-dom";
+import  { useState } from "react";
 import "../style/header.css";
 
 
 const Header = () => {
-  // const [activeTab, setActiveTab] = useState("Emprendedores");
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  // const handleTabChange = (tab) => {
-  //   setActiveTab(tab);
-  // };
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
 
   return (
     <header className="header">
-      {/* Parte superior del header */}
-      {/* <div className="header-top">
-        <Link
-          to=""
-          className={`tab ${activeTab === "Emprendedores" ? "active" : ""}`}
-          onClick={() => handleTabChange("Emprendedores")}
-        >
-          Agencias
-        </Link>
-        <Link
-          title="En desarrollo"
-          to=""
-          className={`tab ${activeTab === "Grandes agencias" ? "active" : ""}`}
-          onClick={() => handleTabChange("Grandes agencias")}
-        >
-          Grandes agencias
-        </Link>
-      </div> */}
-
-      {/* Barra de navegación principal */}
-      <nav className="header-nav">
-        <div className="logo">
-          <Link to="/">
-            <p>Móstralo</p>
-          </Link>
-        </div>
-
-        <ul className="nav-links">
-          <li>
-            <Link to="/portfolio">Portfolios</Link>
-          </li>
-          <li>
-            <Link title="En desarrollo">Casos de Estudiantes</Link>
-          </li>
-          <li>
-            <Link title="En desarrollo">Bolsa de Trabajo</Link>
-          </li>
+      <div className="header__logo">
+        <Link to="/">Mostraló</Link>
+      </div>
+      <button className="header__hamburger" onClick={toggleMenu}>
+        ☰
+      </button>
+      <nav className={`header__nav ${isMenuOpen ? "open" : ""}`}>
+        <ul className="header__menu">
+          <li><Link to="/portfolio" onClick={() => setIsMenuOpen(false)}>Portfolios</Link></li>
+          <li><Link title="En desarrollo" onClick={() => setIsMenuOpen(false)}>Bolsa de Trabajo</Link></li>
+          <li><Link to="/registro" onClick={() => setIsMenuOpen(false)} className="register-btn">Registro</Link></li>
         </ul>
-
-        <Link to="/Registro">
-          <button className="register-btn">Registrarse</button>
-        </Link>
       </nav>
-
-
     </header>
   );
 };

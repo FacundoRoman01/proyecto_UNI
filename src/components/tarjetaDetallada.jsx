@@ -40,7 +40,7 @@ const TarjetaDetallada = ({ persona }) => {
 
       {/* Botón para redirigir */}
       <button className="contact-button" onClick={handleContactClick}>
-        Contactar especialista
+        Contactar
       </button>
     </div>
   );

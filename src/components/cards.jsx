@@ -5,7 +5,7 @@ import PropTypes from "prop-types";
 import personasData from "../../data/personas.json"; // Cargar los datos de las personas
 import "../style/card.css";
 
-const Cards = ({ universidad, limit }) => {
+const Cards = ({ universidad, limit = 0 }) => {  // Establece el valor predeterminado aquí
   const [personas, setPersonas] = useState([]);
   const navigate = useNavigate();
 
@@ -27,7 +27,7 @@ const Cards = ({ universidad, limit }) => {
 
   return (
     <div className="container">
-      <div className="row">
+      <div className="row g-0">
         {personasAMostrar.map((persona) => (
           <div key={persona.id} className="col-md-4 mb-4">
             <div
@@ -68,10 +68,6 @@ const Cards = ({ universidad, limit }) => {
 Cards.propTypes = {
   universidad: PropTypes.string, // Universidad para filtrar
   limit: PropTypes.number, // Límite de tarjetas a mostrar
-};
-
-Cards.defaultProps = {
-  limit: 0, // Predeterminado: muestra todas las tarjetas
 };
 
 export default Cards;

@@ -23,9 +23,12 @@ const ComentariosUsuarios = () => {
     <section className="comments-section">
       {/* Encabezado de comentarios */}
       <div className="comments-header">
-        <h2>Comentarios de clientes</h2>
+        <h2>Comentarios de apoyo a los estudiantes</h2>
+        <p className="comments-subtitle">
+          Ayuda a motivar a los estudiantes dejando un mensaje positivo sobre sus proyectos.
+        </p>
         <button className="rate-button" onClick={handleOpenModal}>
-          Calificar especialista
+          Dejar un mensaje de apoyo
         </button>
       </div>
 
@@ -38,7 +41,22 @@ const ComentariosUsuarios = () => {
           </div>
           <span className="comment-date">30/10/2024</span>
         </div>
-        <p className="comment-text">Muy buen trabajo</p>
+        <p className="comment-text">
+          ¡Excelente trabajo, sigue así! Tienes mucho potencial.
+        </p>
+      </div>
+
+      <div className="comment">
+        <div className="comment-header">
+          <div className="user">
+            <div className="user-avatar">A</div>
+            <span className="user-name">Ana</span>
+          </div>
+          <span className="comment-date">29/10/2024</span>
+        </div>
+        <p className="comment-text">
+          Me encantó tu proyecto, se nota el esfuerzo y dedicación. ¡Ánimo!
+        </p>
       </div>
 
       {/* Modal para calificar */}

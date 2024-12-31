@@ -32,6 +32,31 @@
     background-color: #000000;
     color: #ffffff;
   }
+
+  /* Botón para alternar la visibilidad del sidebar */
+/* Estilo del botón */
+.toggle-sidebar-button {
+  display: none; /* Ocultamos el botón por defecto */
+  background-color: #0046BE;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  margin: 10px auto;
+  text-align: center;
+  cursor: pointer;
+  font-size: 16px;
+  border-radius: 5px;
+}
+
+.toggle-sidebar-button:hover {
+  background-color: #014dd1;
+}
+
+/* Sidebar oculto (en modo mobile puede estar como un slide) */
+.sidebar {
+  transition: all 0.3s ease-in-out;
+}
+
   
   .companies-list {
     display: flex;
@@ -89,4 +114,23 @@
     color: #111827;
   }
   
+  /* Mostrar el botón en pantallas pequeñas (modo móvil) */
+@media (max-width: 768px) {
+  .toggle-sidebar-button {
+    display: block;
+  }
+
+  .sidebar {
+    display: none;
+  }
+
+  .sidebar.show {
+    display: block;
+  }
+}
+
+/* Transiciones suaves para el sidebar */
+.sidebar {
+  transition: all 0.3s ease-in-out;
+}
   

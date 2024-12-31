@@ -13,7 +13,7 @@
     width: 100%;
     aspect-ratio: 50/30;
    background-color: #f4f5f6;
-    position: relative;
+    /* position: relative; */
     display: flex;
     align-items: center;
     padding: 1.7rem;
@@ -89,7 +89,7 @@
     }
   
     .banner {
-      padding: 0.75rem; /* Ajustado el padding para pantallas pequeñas */
+      padding: 0; 
     }
   
     .profile-info {

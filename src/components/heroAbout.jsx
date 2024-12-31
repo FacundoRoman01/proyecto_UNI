@@ -10,10 +10,9 @@ const HeroAbout = () => {
                     Agencias Universitarias: Comparte tus Proyectos
                 </h1>
                 <p className="description">
-                    ¡Bienvenido a una comunidad de estudiantes apasionados por la innovación y el cambio!
-                    Aquí podrás <strong>publicar tus proyectos</strong>, dar a conocer tus ideas y conectar con otros estudiantes, docentes y profesionales que comparten tus intereses.
+                    ¡Bienvenido a una comunidad de estudiantes.
                     La plataforma está diseñada para ayudarte a <strong>potenciar tus proyectos</strong>,
-                    colaborar con otros y <strong>hacerte ver</strong> en el mundo académico y profesional. ¡Es tu oportunidad para transformar tus ideas en realidades!
+                    <strong> hacerte ver</strong> en el mundo académico y profesional. ¡Es tu oportunidad para mostrar tus ideas en realidades!
                 </p>
                 {/* Envuelve el botón con Link para permitir la navegación */}
                 <Link to="/Registro">

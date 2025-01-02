@@ -1,5 +1,6 @@
-import  { useState } from "react";
-import "../style/registro.css"; 
+import { useState } from "react";
+import { Link } from "react-router-dom"; // Importa Link
+import "../style/registro.css";
 
 const Register = () => {
   // Estado para los campos del formulario
@@ -69,6 +70,9 @@ const Register = () => {
           <button type="submit" className="btn-submit">
             Registrar
           </button>
+          <div className="form-link">
+            <p>¿Ya tienes una cuenta? <Link to="/login">Inicia sesión aquí</Link></p>
+          </div>
         </form>
       </div>
     </div>

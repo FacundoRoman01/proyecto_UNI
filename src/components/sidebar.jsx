@@ -29,7 +29,7 @@ const Sidebar = ({ onFilterChange }) => {
       {/* Sidebar con visibilidad controlada */}
       <aside className={`sidebar ${showSidebar ? "show" : ""}`}>
         <div className="tabs">
-          <h4>Universidades/Instituto</h4>
+          <h4>Universidades</h4>
         </div>
 
         <div className="companies-list">

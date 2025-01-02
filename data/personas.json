@@ -2,7 +2,7 @@
   {
     "id": 1,
     "name": "facundo roman",
-    "university": "Da vinci",
+    "university": "Da Vinci",
     "avatar": "src/img/avatar1.png",
     "banner": "src/img/banner1.jpg",
     "companyLogo": "src/img/davinci.png",
@@ -97,70 +97,6 @@
   },
   {
     "id": 7,
-    "name": "Antonio Ruiz",
-    "university": "Barcelona",
-    "avatar": "src/img/avatar1.png",
-    "banner": "src/img/banner5.jpg",
-    "companyLogo": "src/img/davinci.png",
-    "services": ["Consultoría", "Desarrollo de Software", "Estrategias de Marketing"],
-    "about": "Experto en crear soluciones digitales que optimizan los procesos de negocios. He trabajado con diversas empresas ayudándolas a mejorar su eficiencia y a lograr un crecimiento sostenido.",
-    "contact": "antonio@example.com",
-    "images": [
-      "https://via.placeholder.com/800x400?text=Banner7",
-      "https://via.placeholder.com/800x400?text=Banner7",
-      "https://via.placeholder.com/800x400?text=Banner7"
-    ]
-  },
-  {
-    "id": 8,
-    "name": "Sofia Lopez",
-    "university": "Buenos Aires",
-    "avatar": "src/img/avatar1.png",
-    "banner": "src/img/banner2.jpg",
-    "companyLogo": "src/img/davinci.png",
-    "services": ["Marketing Digital", "Consultoría", "Gestión de Proyectos"],
-    "about": "Consultora en marketing digital con especialización en posicionamiento SEO y estrategias en redes sociales. Ayudo a las empresas a tener mayor visibilidad online y a aumentar sus conversiones.",
-    "contact": "sofia@example.com",
-    "images": [
-      "https://via.placeholder.com/800x400?text=Banner8",
-      "https://via.placeholder.com/800x400?text=Banner8",
-      "https://via.placeholder.com/800x400?text=Banner8"
-    ]
-  },
-  {
-    "id": 9,
-    "name": "Luis Fernandez",
-    "university": "University de La Plata",
-    "avatar": "src/img/avatar1.png",
-    "banner": "src/img/banner1.jpg",
-    "companyLogo": "src/img/davinci.png",
-    "services": ["Marketing Online", "Desarrollo Web", "Consultoría"],
-    "about": "Desarrollador web y consultor en marketing online con más de 5 años de experiencia en proyectos para empresas en diversas industrias. Me enfoco en crear soluciones digitales escalables y efectivas.",
-    "contact": "luis@example.com",
-    "images": [
-      "https://via.placeholder.com/800x400?text=Banner9",
-      "https://via.placeholder.com/800x400?text=Banner9",
-      "https://via.placeholder.com/800x400?text=Banner9"
-    ]
-  },
-  {
-    "id": 10,
-    "name": "Marta Rodríguez",
-    "university": "San Juan",
-    "avatar": "src/img/avatar1.png",
-    "banner": "src/img/banner6.jpg",
-    "companyLogo": "src/img/davinci.png",
-    "services": ["Desarrollo Web", "Consultoría", "Gestión de Contenidos"],
-    "about": "Consultora en tecnologías digitales con enfoque en desarrollo web y optimización de contenidos. Me especializo en crear sitios web y plataformas que impulsan la productividad y el éxito online.",
-    "contact": "marta@example.com",
-    "images": [
-      "https://via.placeholder.com/800x400?text=Banner10",
-      "https://via.placeholder.com/800x400?text=Banner10",
-      "https://via.placeholder.com/800x400?text=Banner10"
-    ]
-  },
-  {
-    "id": 11,
     "name": "agustin roman",
     "university": "kennedy",
     "avatar": "src/img/avatar1.png",
@@ -176,7 +112,7 @@
     ]
   },
   {
-    "id": 12,
+    "id": 8,
     "name": "pablo roman",
     "university": "UTN",
     "avatar": "src/img/avatar1.png",
@@ -190,5 +126,102 @@
       "https://via.placeholder.com/800x400?text=Banner1",
       "https://via.placeholder.com/800x400?text=Banner1"
     ]
+  },
+  {
+    "id": 9,
+    "name": "lisi atencia",
+    "university": "UTN",
+    "avatar": "src/img/avatar1.png",
+    "banner": "src/img/banner2.jpg",
+    "companyLogo": "src/img/utn.jpg",
+    "services": ["Marketing Online", "Desarrollo Web", "Consultoría"],
+    "about": "Soy un profesional con más de 10 años de experiencia en marketing digital y desarrollo web. He trabajado con empresas globales para potenciar su presencia online, optimizando estrategias y acompañando su crecimiento en el mercado digital.",
+    "contact": "juanperez@example.com",
+    "images": [
+      "https://via.placeholder.com/800x400?text=Banner1",
+      "https://via.placeholder.com/800x400?text=Banner1",
+      "https://via.placeholder.com/800x400?text=Banner1"
+    ]
+  },
+  {
+    "id": 10,
+    "name": "Nico parodi",
+    "university": "UTN",
+    "avatar": "src/img/avatar1.png",
+    "banner": "src/img/banner5.jpg",
+    "companyLogo": "src/img/utn.jpg",
+    "services": ["Marketing Online", "Desarrollo Web", "Consultoría"],
+    "about": "Soy un profesional con más de 10 años de experiencia en marketing digital y desarrollo web. He trabajado con empresas globales para potenciar su presencia online, optimizando estrategias y acompañando su crecimiento en el mercado digital.",
+    "contact": "juanperez@example.com",
+    "images": [
+      "https://via.placeholder.com/800x400?text=Banner1",
+      "https://via.placeholder.com/800x400?text=Banner1",
+      "https://via.placeholder.com/800x400?text=Banner1"
+    ]
+  },
+  {
+    "id": 11,
+    "name": "Juan soler",
+    "university": "UTN",
+    "avatar": "src/img/avatar1.png",
+    "banner": "src/img/banner2.jpg",
+    "companyLogo": "src/img/utn.jpg",
+    "services": ["Marketing Online", "Desarrollo Web", "Consultoría"],
+    "about": "Soy un profesional con más de 10 años de experiencia en marketing digital y desarrollo web. He trabajado con empresas globales para potenciar su presencia online, optimizando estrategias y acompañando su crecimiento en el mercado digital.",
+    "contact": "juanperez@example.com",
+    "images": [
+      "https://via.placeholder.com/800x400?text=Banner1",
+      "https://via.placeholder.com/800x400?text=Banner1",
+      "https://via.placeholder.com/800x400?text=Banner1"
+    ]
+  },
+  {
+    "id": 12,
+    "name": "Jere Juarez",
+    "university": "Da Vinci",
+    "avatar": "src/img/avatar1.png",
+    "banner": "src/img/banner2.jpg",
+    "companyLogo": "src/img/davinci.png",
+    "services": ["Marketing Online", "Desarrollo Web", "Consultoría"],
+    "about": "Soy un profesional con más de 10 años de experiencia en marketing digital y desarrollo web. He trabajado con empresas globales para potenciar su presencia online, optimizando estrategias y acompañando su crecimiento en el mercado digital.",
+    "contact": "juanperez@example.com",
+    "images": [
+      "https://via.placeholder.com/800x400?text=Banner1",
+      "https://via.placeholder.com/800x400?text=Banner1",
+      "https://via.placeholder.com/800x400?text=Banner1"
+    ]
+  },
+  {
+    "id": 13,
+    "name": "pablo roman",
+    "university": "UADE",
+    "avatar": "src/img/avatar1.png",
+    "banner": "src/img/banner4.jpg",
+    "companyLogo": "src/img/uade.png",
+    "services": ["Marketing Online", "Desarrollo Web", "Consultoría"],
+    "about": "Soy un profesional con más de 10 años de experiencia en marketing digital y desarrollo web. He trabajado con empresas globales para potenciar su presencia online, optimizando estrategias y acompañando su crecimiento en el mercado digital.",
+    "contact": "juanperez@example.com",
+    "images": [
+      "https://via.placeholder.com/800x400?text=Banner1",
+      "https://via.placeholder.com/800x400?text=Banner1",
+      "https://via.placeholder.com/800x400?text=Banner1"
+    ]
+  },
+  {
+    "id": 14,
+    "name": "pablo roman",
+    "university": "ORT",
+    "avatar": "src/img/avatar1.png",
+    "banner": "src/img/banner5.jpg",
+    "companyLogo": "src/img/ort.png",
+    "services": ["Marketing Online", "Desarrollo Web", "Consultoría"],
+    "about": "Soy un profesional con más de 10 años de experiencia en marketing digital y desarrollo web. He trabajado con empresas globales para potenciar su presencia online, optimizando estrategias y acompañando su crecimiento en el mercado digital.",
+    "contact": "juanperez@example.com",
+    "images": [
+      "https://via.placeholder.com/800x400?text=Banner1",
+      "https://via.placeholder.com/800x400?text=Banner1",
+      "https://via.placeholder.com/800x400?text=Banner1"
+    ]
   }
+
 ]

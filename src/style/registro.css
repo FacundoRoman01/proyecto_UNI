@@ -37,6 +37,25 @@
   margin-bottom: 20px; /* Espacio entre los campos */
 }
 
+.form-link {
+  text-align: center; /* Centra el texto */
+  margin-top: 15px; /* Espacio entre el botón y el enlace */
+  font-size: 14px; /* Tamaño del texto */
+  color: #555; /* Color de texto */
+}
+
+.form-link a {
+  color: #0066cc; /* Color del enlace */
+  text-decoration: none; /* Elimina el subrayado */
+  font-weight: bold; /* Resalta el texto */
+  transition: color 0.3s ease;
+}
+
+.form-link a:hover {
+  color: #005bb5; /* Cambia el color al pasar el ratón */
+}
+
+
 label {
   font-size: 16px; /* Aumento de tamaño de la fuente para mejorar la legibilidad */
   font-weight: bold;

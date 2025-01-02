@@ -22,6 +22,7 @@ const Header = () => {
         <ul className="header__menu">
           <li><Link to="/portfolio" onClick={() => setIsMenuOpen(false)}>Portfolios</Link></li>
           <li><Link title="En desarrollo" onClick={() => setIsMenuOpen(false)}>Bolsa de Trabajo</Link></li>
+          <li><Link title="En desarrollo" onClick={() => setIsMenuOpen(false)}>Beneficios para Estudiantes</Link></li>
           <li><Link to="/registro" onClick={() => setIsMenuOpen(false)} className="register-btn">Registro</Link></li>
         </ul>
       </nav>

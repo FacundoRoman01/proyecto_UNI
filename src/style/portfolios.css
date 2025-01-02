@@ -20,3 +20,42 @@
   padding: 1rem;
   border-radius: 8px;
 }
+
+
+/* Estilo para el contenedor de la sección */
+.section-portfolio {
+  padding: 20px;
+}
+
+/* Estilo para la columna que contiene las tarjetas */
+.section-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centra el contenido horizontalmente */
+  justify-content: flex-start; /* Alinea hacia el inicio si es necesario */
+  text-align: center; /* Asegura que el texto dentro esté centrado */
+  margin-top: 20px; /* Ajuste de espaciado superior */
+}
+
+/* Estilo para el contenedor del botón */
+.button-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px; /* Ajusta el espacio superior según lo necesites */
+}
+
+/* Estilo para el botón */
+.ver-mas-btn {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.ver-mas-btn:hover {
+  background-color: #0056b3;
+}

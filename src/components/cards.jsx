@@ -2,15 +2,14 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import PropTypes from "prop-types";
-import personasData from "../../data/personas.json"; // Cargar los datos de las personas
+import personasData from "../../data/personas.json"; // Datos de las personas
 import "../style/card.css";
 
-const Cards = ({ universidad, limit = 0 }) => {  // Establece el valor predeterminado aquí
+const Cards = ({ universidad, limit = 0 }) => { 
   const [personas, setPersonas] = useState([]);
   const navigate = useNavigate();
 
   useEffect(() => {
-    // Filtrar las personas según la universidad, si no hay filtro, mostrar todas
     const filteredPersonas = universidad
       ? personasData.filter((persona) => persona.university === universidad)
       : personasData;
@@ -22,7 +21,6 @@ const Cards = ({ universidad, limit = 0 }) => {  // Establece el valor predeterm
     navigate(`/detalle/${personaId}`);
   };
 
-  // Aplicar límite solo si se proporciona y es mayor que 0
   const personasAMostrar = limit > 0 ? personas.slice(0, limit) : personas;
 
   return (
@@ -64,10 +62,9 @@ const Cards = ({ universidad, limit = 0 }) => {  // Establece el valor predeterm
   );
 };
 
-// Validación de las propiedades usando PropTypes
 Cards.propTypes = {
-  universidad: PropTypes.string, // Universidad para filtrar
-  limit: PropTypes.number, // Límite de tarjetas a mostrar
+  universidad: PropTypes.string, 
+  limit: PropTypes.number, 
 };
 
 export default Cards;

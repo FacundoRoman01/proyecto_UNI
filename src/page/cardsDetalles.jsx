@@ -1,6 +1,6 @@
 import { useParams } from "react-router-dom";
 import personasData from "../../data/personas.json";  // Ruta correcta a tu archivo de datos
-import ProfileCard from "../components/tarjetaDetallada.jsx";
+import TarjetaDetallada from "../components/tarjetaDetallada.jsx";
 import ImageCarousel from "../components/imageCarousel";
 import AboutSection from "../components/aboutCard.jsx";
 import Comments from "../components/comentariosUsuarios.jsx";
@@ -24,7 +24,7 @@ const CardsDetalles = () => {
           <div className="grid">
             {/* Primera fila con ProfileCard y Carousel */}
             <div className="profile-card-column">
-              <ProfileCard persona={persona} /> {/* Pasa los datos de la persona a ProfileCard */}
+              <TarjetaDetallada persona={persona} /> {/* Pasa los datos de la persona a ProfileCard */}
               <TeamGroup />
             </div>
             <div className="carousel-column">

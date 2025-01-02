@@ -1,12 +1,17 @@
 import "../style/tarjeta_detallada.css";
 import { Link, useNavigate } from "react-router-dom";
+import { FaEnvelope, FaWhatsapp } from 'react-icons/fa';  // Importar los iconos de react-icons
 
 const TarjetaDetallada = ({ persona }) => {
   const navigate = useNavigate(); // Hook para navegación programática
 
-  const handleContactClick = () => {
-    // Redirigir a una página de detalles con el ID
-    navigate(`/detalle/${persona.id}`);
+  // Función para manejar el contacto
+  const handleContactClick = (method) => {
+    if (method === "email") {
+      window.location.href = `mailto:${persona.email}`; // Redirige al email
+    } else if (method === "whatsapp") {
+      window.location.href = `https://wa.me/${persona.whatsapp}`; // Redirige a WhatsApp
+    }
   };
 
   return (
@@ -14,9 +19,8 @@ const TarjetaDetallada = ({ persona }) => {
       {/* Encabezado con logo e información */}
       <div className="profile-header">
         <img
-          src={persona.avatar} 
-          alt={`${persona.name} avatar`}
-          className="company-logo"
+          src={persona.avatar}  // Esto asegura que la ruta es correcta desde la raíz
+          alt={persona.name}
         />
         <h1 className="company-title">{persona.name} - {persona.university}</h1>
       </div>
@@ -38,10 +42,21 @@ const TarjetaDetallada = ({ persona }) => {
         </div>
       </div>
 
-      {/* Botón para redirigir */}
-      <button className="contact-button" onClick={handleContactClick}>
-        Contactar
-      </button>
+      {/* Botones de contacto con iconos */}
+      <div className="contact-buttons">
+        <button
+          className="contact-button"
+          onClick={() => handleContactClick("email")}
+        >
+          <FaEnvelope /> Email
+        </button>
+        <button
+          className="contact-button"
+          onClick={() => handleContactClick("whatsapp")}
+        >
+          <FaWhatsapp /> WhatsApp
+        </button>
+      </div>
     </div>
   );
 };

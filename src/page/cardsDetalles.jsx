@@ -3,11 +3,11 @@ import personasData from "../../data/personas.json";  // Ruta correcta a tu arch
 import TarjetaDetallada from "../components/tarjetaDetallada.jsx";
 import ImageCarousel from "../components/imageCarousel";
 import AboutSection from "../components/aboutCard.jsx";
-import Comments from "../components/comentariosUsuarios.jsx";
+// import Comments from "../components/comentariosUsuarios.jsx";
 import "../style/sectionDetalle.css";
 import Header from "../components/header";
 import TeamGroup from "../components/teamGroup.jsx";
-
+import Footer from "../components/footer.jsx";
 const CardsDetalles = () => {
   const { id } = useParams();  // Obtiene el id de la URL
   const persona = personasData.find((persona) => persona.id === parseInt(id)); // Busca los datos según el id
@@ -29,15 +29,17 @@ const CardsDetalles = () => {
             </div>
             <div className="carousel-column">
             <ImageCarousel images={persona.images} />
+            <div className="details-column">
+            <AboutSection persona={persona} /> {/* Pasa los datos de la persona a AboutSection */}
+            {/* <Comments /> */}
+          </div>
             </div>
           </div>
           {/* Segunda fila con AboutSection y Comments */}
-          <div className="details-column">
-            <AboutSection persona={persona} /> {/* Pasa los datos de la persona a AboutSection */}
-            <Comments />
-          </div>
+          
         </div>
       </div>
+      <Footer />
     </>
   );
 };

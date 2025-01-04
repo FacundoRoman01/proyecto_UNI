@@ -87,7 +87,7 @@
   }
 
   .header__nav.open {
-    max-height: 200px; /* Altura máxima cuando el menú está abierto */
+    max-height: 310px; /* Altura máxima cuando el menú está abierto */
   }
 
   .header__menu {

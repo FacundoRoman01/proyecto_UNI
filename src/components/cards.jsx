@@ -25,9 +25,9 @@ const Cards = ({ universidad, limit = 0 }) => {
 
   return (
     <div className="container">
-      <div className="row g-0">
+      <div className="row g-0 ">
         {personasAMostrar.map((persona) => (
-          <div key={persona.id} className="col-md-4 mb-4">
+          <div key={persona.id} className="col-md-4 mb-4 cards_center">
             <div
               className="profile-card"
               onClick={() => handleClick(persona.id)}

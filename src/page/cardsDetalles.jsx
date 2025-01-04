@@ -25,7 +25,7 @@ const CardsDetalles = () => {
             {/* Primera fila con ProfileCard y Carousel */}
             <div className="profile-card-column">
               <TarjetaDetallada persona={persona} /> {/* Pasa los datos de la persona a ProfileCard */}
-              <TeamGroup />
+              <TeamGroup teamMembers={persona.teamMembers} /> 
             </div>
             <div className="carousel-column">
             <ImageCarousel images={persona.images} />

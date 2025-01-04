@@ -1,42 +1,80 @@
 .team-group {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 20px;
+  justify-items: center;
+  margin: 20px 0;
+}
+
+.team-title{
+  text-align: center;
+  margin: 15px;
+}
+
+.team-member {
   display: flex;
-  position: relative;
+  flex-direction: column;
   align-items: center;
-  justify-content: center;
+  text-align: center;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  padding: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.team-member:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
 .team-avatar {
-  width: 60px;
-  height: 60px;
+  width: 100px;
+  height: 100px;
   border-radius: 50%;
   background-size: cover;
   background-position: center;
-  border: 2px solid white;
-  margin-left: -15px;
-  z-index: 1;
-  cursor: pointer;
+  margin-bottom: 10px;
+  border: 3px solid #007bff;
 }
 
-.team-title {
-  font-size: 1.2rem;
+.team-name {
+  font-size: 16px;
   font-weight: bold;
-  margin: 20px;/* Espacio entre el título y los avatares */
-  text-align: center;
+  color: #333;
+  margin-top: 5px;
 }
 
-.team-avatar:first-child {
-  margin-left: 0; /* El primer avatar no tiene margen negativo */
+.team-name:hover {
+  color: #007bff;
 }
 
-.team-avatar.emoji {
+.team-links {
   display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: #f2f2f2;
-  font-size: 24px;
+  gap: 10px;
+  margin-top: 5px;
 }
 
-.team-avatar:hover{
-  transform: scale(1.2);
-  transition: all 0.5s ease;
+.team-instagram, .team-linkedin {
+  font-size: 24px;
+  transition: transform 0.3s ease, color 0.3s ease;
 }
+
+.team-instagram {
+  color: #e1306c;
+}
+
+.team-instagram:hover {
+  color: #c13584;
+  transform: scale(1.2);
+}
+
+.team-linkedin {
+  color: #0077b5;
+}
+
+.team-linkedin:hover {
+  color: #005582;
+  transform: scale(1.2);
+}
+

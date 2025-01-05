@@ -72,7 +72,8 @@
  .profile-details p {
     font-size: 0.75rem; 
     /* color: #000 !important; */
-    
+    color: #696f7a;
+    font-weight: 500;
     margin: 0;
     line-height: 1.5;
     

@@ -3,72 +3,65 @@ import "../style/imageCarousel.css";
 
 const ImageCarousel = ({ images }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
-  const goToSlide = (index) => {
+  const handlePrev = () => {
+    setCurrentIndex((prevIndex) =>
+      prevIndex === 0 ? images.length - 1 : prevIndex - 1
+    );
+  };
+
+  const handleNext = () => {
+    setCurrentIndex((prevIndex) =>
+      prevIndex === images.length - 1 ? 0 : prevIndex + 1
+    );
+  };
+
+  const openModal = (index) => {
     setCurrentIndex(index);
+    setIsModalOpen(true);
   };
 
-  const goToPrevious = () => {
-    const isFirstSlide = currentIndex === 0;
-    const newIndex = isFirstSlide ? images.length - 1 : currentIndex - 1;
-    setCurrentIndex(newIndex);
-  };
-
-  const goToNext = () => {
-    const isLastSlide = currentIndex === images.length - 1;
-    const newIndex = isLastSlide ? 0 : currentIndex + 1;
-    setCurrentIndex(newIndex);
+  const closeModal = () => {
+    setIsModalOpen(false);
   };
 
   return (
     <div className="carousel">
       <div className="carousel-container">
-        {/* Slides */}
         <div
           className="slides"
           style={{ transform: `translateX(-${currentIndex * 100}%)` }}
         >
           {images.map((image, index) => (
-            <div key={index} className="slide">
+            <div className="slide" key={index}>
               <img
                 src={image}
                 alt={`Slide ${index + 1}`}
                 className="slide-image"
+                onClick={() => openModal(index)} // Abrir modal con la imagen seleccionada
               />
             </div>
           ))}
         </div>
-
-        {/* Botón Anterior */}
-        <button
-          className="nav-button prev"
-          onClick={goToPrevious}
-          aria-label="Previous slide"
-        >
-          &#9664;
+        <button className="nav-button prev" onClick={handlePrev}>
+          ❮
         </button>
-
-        {/* Botón Siguiente */}
-        <button
-          className="nav-button next"
-          onClick={goToNext}
-          aria-label="Next slide"
-        >
-          &#9654;
+        <button className="nav-button next" onClick={handleNext}>
+          ❯
         </button>
-
-        {/* Puntos de Navegación */}
-        <div className="dots">
-          {images.map((_, index) => (
-            <button
-              key={index}
-              className={`dot ${index === currentIndex ? "active" : ""}`}
-              onClick={() => goToSlide(index)}
-              aria-label={`Go to slide ${index + 1}`}
-            />
-          ))}
-        </div>
       </div>
+
+      {/* Modal */}
+      {isModalOpen && (
+        <div className="modal-overlay" onClick={closeModal}>
+          <img
+            src={images[currentIndex]}
+            alt={`Slide ${currentIndex + 1}`}
+            className="modal-image"
+          />
+        </div>
+      )}
     </div>
   );
 };

@@ -23,9 +23,9 @@
 
 
 /* Estilo para el contenedor de la sección */
-.section-portfolio {
+/* .section-portfolio {
   padding: 20px;
-}
+} */
 
 /* Estilo para la columna que contiene las tarjetas */
 .section-card {
@@ -54,6 +54,7 @@
   cursor: pointer;
   font-size: 16px;
   transition: background-color 0.3s ease;
+  margin: 20px;
 }
 
 .ver-mas-btn:hover {

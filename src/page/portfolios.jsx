@@ -42,7 +42,8 @@ const Portfolios = () => {
             </div>
             <div className="col-md-9 col-12 section-card">
               <Cards universidad={filteredUniversidad} limit={limit} />
-              {hasMore && (
+              {/* Condición para mostrar el botón "Ver más" solo cuando no hay filtro de universidad */}
+              {!filteredUniversidad && hasMore && (
                 <div className="button-container">
                   <button className="ver-mas-btn" onClick={handleVerMas}>
                     Ver más

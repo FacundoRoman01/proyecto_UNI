@@ -110,16 +110,16 @@
     }
   
     .profile-details h2 {
-      font-size: 0.75rem; /* Ajuste para títulos más pequeños */
+      font-size: 0.85rem; /* Ajuste para títulos más pequeños */
     }
   
     .profile-details p {
-      font-size: 0.625rem; /* Ajuste para el texto más pequeño */
+      font-size: 0.825rem; /* Ajuste para el texto más pequeño */
     }
   
     .empresa-icon {
-      width: 18px; /* Ajuste para el ícono en pantallas pequeñas */
-      height: 18px;
+      width: 30px;
+      height: 30px;
     }
   }
   

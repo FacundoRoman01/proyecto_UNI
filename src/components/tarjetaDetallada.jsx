@@ -19,7 +19,7 @@ const TarjetaDetallada = ({ persona }) => {
       {/* Encabezado con logo e información */}
       <div className="profile-header">
         <img
-          src={persona.avatar}  // Esto asegura que la ruta es correcta desde la raíz
+          src={persona.avatar} // Esto asegura que la ruta es correcta desde la raíz
           alt={persona.name}
         />
         <h1 className="company-title">{persona.name} - {persona.university}</h1>

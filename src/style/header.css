@@ -53,18 +53,19 @@
 }
 
 .register-btn {
-  background-color: red;
-  color: #0046BE;
-  border: none;
+  background-color: #fff; /* Fondo blanco */
+  color: #0046BE !important; /* Letras azules */
+  border: 2px solid #0046BE; /* Borde azul para mayor contraste */
   padding: 10px 20px;
   border-radius: 5px;
   font-weight: bold;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
-/* 
-.register-btn:hover {
-  background-color: #f0f0f0;
+
+/* .register-btn:hover {
+  background-color: #0046BE; 
+  color: #fff; 
 } */
 
 

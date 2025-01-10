@@ -26,13 +26,14 @@ const TarjetaDetallada = ({ persona }) => {
       </div>
 
       {/* Navegación con Link */}
-      <Link to={`/detalle/${persona.id}`} className="website-link">
-        🌐 Visita nuestra web
-      </Link>
-
+      <div className="website-link">
+        <a href={persona.url_paginas} target="_blank" rel="noopener noreferrer">
+          Visita la página
+        </a>
+      </div>
       {/* Servicios */}
       <div className="services-section">
-        <h2>Servicios ofrecidos:</h2>
+        <h2>Servicios:</h2>
         <div className="service-tags">
           {persona.services.map((servicio, index) => (
             <span key={index} className="tag">

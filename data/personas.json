@@ -1,15 +1,16 @@
 [
   {
     "id": 1,
-    "name": "facundo roman",
+    "name": "Facundo Roman",
     "university": "Da Vinci",
     "avatar": "src/img/avatar1.png",
-    "banner": "src/img/banner1.jpg",
+    "banner": "src/img/fr2.png",
     "companyLogo": "src/img/davinci.png",
     "services": ["Marketing Online", "Desarrollo Web", "Consultoría"],
     "about": "Soy un profesional con más de 10 años de experiencia en marketing digital y desarrollo web. He trabajado con empresas globales para potenciar su presencia online, optimizando estrategias y acompañando su crecimiento en el mercado digital.",
     "contact": "juanperez@example.com",
-    "whatsapp": "+5491123456789", 
+    "whatsapp": "+5491123456789",
+    "url_paginas" : "https://fr-pinamar.netlify.app/",
     "images": [
      "https://firebasestorage.googleapis.com/v0/b/cofolios-app.appspot.com/o/Microsoft%20Files%2FThumbnails%2FCandy%20Wang.jpg?alt=media&token=3430adb3-20df-4faf-aef5-caf89b69ceb8",
      "https://firebasestorage.googleapis.com/v0/b/cofolios-app.appspot.com/o/meta-portfolios%2Fthumbnails%2Faidentoole_thumbnail.jpg?alt=media&token=b354eca0-2150-4932-8916-1337b961e672",
@@ -55,6 +56,7 @@
     "about": "Especialista en estrategias de marketing digital con enfoque en comercio electrónico. He implementado soluciones integrales para empresas que buscan optimizar su gestión y aumentar su alcance online.",
     "contact": "juanperez@example.com",
     "whatsapp": "+5491123456789", 
+    "url_paginas" : "https://fr-pinamar.netlify.app/",
    "images": [
      "https://firebasestorage.googleapis.com/v0/b/cofolios-app.appspot.com/o/Microsoft%20Files%2FThumbnails%2FCandy%20Wang.jpg?alt=media&token=3430adb3-20df-4faf-aef5-caf89b69ceb8",
      "https://firebasestorage.googleapis.com/v0/b/cofolios-app.appspot.com/o/meta-portfolios%2Fthumbnails%2Faidentoole_thumbnail.jpg?alt=media&token=b354eca0-2150-4932-8916-1337b961e672",
@@ -98,7 +100,8 @@
     "services": ["Marketing Online", "Desarrollo Web", "Consultoría"],
     "about": "Cuento con amplia experiencia en desarrollo de estrategias web B2C y B2B, logrando conectar plataformas digitales con soluciones ERP y marketplaces. Mi objetivo es facilitar la gestión y el crecimiento de negocios online.",
     "contact": "juanperez@example.com",
-    "whatsapp": "+5491123456789", 
+    "whatsapp": "+5491123456789",
+    "url_paginas" : "https://fr-pinamar.netlify.app/",
     "images": [
      "https://firebasestorage.googleapis.com/v0/b/cofolios-app.appspot.com/o/Microsoft%20Files%2FThumbnails%2FCandy%20Wang.jpg?alt=media&token=3430adb3-20df-4faf-aef5-caf89b69ceb8",
      "https://firebasestorage.googleapis.com/v0/b/cofolios-app.appspot.com/o/meta-portfolios%2Fthumbnails%2Faidentoole_thumbnail.jpg?alt=media&token=b354eca0-2150-4932-8916-1337b961e672",
@@ -143,6 +146,7 @@
     "about": "Consultor senior en marketing digital y tecnología con experiencia en la implementación de soluciones innovadoras. Ayudo a las empresas a optimizar sus recursos y alcanzar el éxito en entornos digitales.",
     "contact": "juanperez@example.com",
     "whatsapp": "+5491123456789", 
+    "url_paginas" : "https://fr-pinamar.netlify.app/",
 "images": [
      "https://firebasestorage.googleapis.com/v0/b/cofolios-app.appspot.com/o/Microsoft%20Files%2FThumbnails%2FCandy%20Wang.jpg?alt=media&token=3430adb3-20df-4faf-aef5-caf89b69ceb8",
      "https://firebasestorage.googleapis.com/v0/b/cofolios-app.appspot.com/o/meta-portfolios%2Fthumbnails%2Faidentoole_thumbnail.jpg?alt=media&token=b354eca0-2150-4932-8916-1337b961e672",
@@ -187,6 +191,7 @@
     "about": "Líder en el desarrollo e integración de soluciones de software para eCommerce. Aplico estrategias innovadoras que permiten ahorrar hasta un 80% del tiempo de gestión y potenciar negocios digitales de manera integral.",
     "contact": "juanperez@example.com",
     "whatsapp": "+5491123456789", 
+    "url_paginas" : "https://fr-pinamar.netlify.app/",
     "images": [
      "https://firebasestorage.googleapis.com/v0/b/cofolios-app.appspot.com/o/Microsoft%20Files%2FThumbnails%2FCandy%20Wang.jpg?alt=media&token=3430adb3-20df-4faf-aef5-caf89b69ceb8",
      "https://firebasestorage.googleapis.com/v0/b/cofolios-app.appspot.com/o/meta-portfolios%2Fthumbnails%2Faidentoole_thumbnail.jpg?alt=media&token=b354eca0-2150-4932-8916-1337b961e672",
@@ -231,6 +236,7 @@
     "about": "Profesional en desarrollo web y estrategias de marketing con foco en la consultoría empresarial. Trabajo en conjunto con las empresas para garantizar resultados efectivos y posicionar sus marcas en el mercado digital.",
     "contact": "juanperez@example.com",
     "whatsapp": "+5491123456789", 
+    "url_paginas" : "https://fr-pinamar.netlify.app/",
     "images": [
      "https://firebasestorage.googleapis.com/v0/b/cofolios-app.appspot.com/o/Microsoft%20Files%2FThumbnails%2FCandy%20Wang.jpg?alt=media&token=3430adb3-20df-4faf-aef5-caf89b69ceb8",
      "https://firebasestorage.googleapis.com/v0/b/cofolios-app.appspot.com/o/meta-portfolios%2Fthumbnails%2Faidentoole_thumbnail.jpg?alt=media&token=b354eca0-2150-4932-8916-1337b961e672",
@@ -275,6 +281,7 @@
     "about": "Soy un profesional con más de 10 años de experiencia en marketing digital y desarrollo web. He trabajado con empresas globales para potenciar su presencia online, optimizando estrategias y acompañando su crecimiento en el mercado digital.",
     "contact": "juanperez@example.com",
     "whatsapp": "+5491123456789", 
+    "url_paginas" : "https://fr-pinamar.netlify.app/",
     "images": [
      "https://firebasestorage.googleapis.com/v0/b/cofolios-app.appspot.com/o/Microsoft%20Files%2FThumbnails%2FCandy%20Wang.jpg?alt=media&token=3430adb3-20df-4faf-aef5-caf89b69ceb8",
      "https://firebasestorage.googleapis.com/v0/b/cofolios-app.appspot.com/o/meta-portfolios%2Fthumbnails%2Faidentoole_thumbnail.jpg?alt=media&token=b354eca0-2150-4932-8916-1337b961e672",
@@ -319,6 +326,7 @@
     "about": "Soy un profesional con más de 10 años de experiencia en marketing digital y desarrollo web. He trabajado con empresas globales para potenciar su presencia online, optimizando estrategias y acompañando su crecimiento en el mercado digital.",
     "contact": "juanperez@example.com",
     "whatsapp": "+5491123456789", 
+    "url_paginas" : "https://fr-pinamar.netlify.app/",
     "images": [
      "https://firebasestorage.googleapis.com/v0/b/cofolios-app.appspot.com/o/Microsoft%20Files%2FThumbnails%2FCandy%20Wang.jpg?alt=media&token=3430adb3-20df-4faf-aef5-caf89b69ceb8",
      "https://firebasestorage.googleapis.com/v0/b/cofolios-app.appspot.com/o/meta-portfolios%2Fthumbnails%2Faidentoole_thumbnail.jpg?alt=media&token=b354eca0-2150-4932-8916-1337b961e672",
@@ -363,6 +371,7 @@
     "about": "Soy un profesional con más de 10 años de experiencia en marketing digital y desarrollo web. He trabajado con empresas globales para potenciar su presencia online, optimizando estrategias y acompañando su crecimiento en el mercado digital.",
     "contact": "juanperez@example.com",
     "whatsapp": "+5491123456789", 
+    "url_paginas" : "https://fr-pinamar.netlify.app/",
  "images": [
      "https://firebasestorage.googleapis.com/v0/b/cofolios-app.appspot.com/o/Microsoft%20Files%2FThumbnails%2FCandy%20Wang.jpg?alt=media&token=3430adb3-20df-4faf-aef5-caf89b69ceb8",
      "https://firebasestorage.googleapis.com/v0/b/cofolios-app.appspot.com/o/meta-portfolios%2Fthumbnails%2Faidentoole_thumbnail.jpg?alt=media&token=b354eca0-2150-4932-8916-1337b961e672",
@@ -407,6 +416,7 @@
     "about": "Soy un profesional con más de 10 años de experiencia en marketing digital y desarrollo web. He trabajado con empresas globales para potenciar su presencia online, optimizando estrategias y acompañando su crecimiento en el mercado digital.",
     "contact": "juanperez@example.com",
     "whatsapp": "+5491123456789", 
+    "url_paginas" : "https://fr-pinamar.netlify.app/",
     "images": [
      "https://firebasestorage.googleapis.com/v0/b/cofolios-app.appspot.com/o/Microsoft%20Files%2FThumbnails%2FCandy%20Wang.jpg?alt=media&token=3430adb3-20df-4faf-aef5-caf89b69ceb8",
      "https://firebasestorage.googleapis.com/v0/b/cofolios-app.appspot.com/o/meta-portfolios%2Fthumbnails%2Faidentoole_thumbnail.jpg?alt=media&token=b354eca0-2150-4932-8916-1337b961e672",
@@ -451,6 +461,7 @@
     "about": "Soy un profesional con más de 10 años de experiencia en marketing digital y desarrollo web. He trabajado con empresas globales para potenciar su presencia online, optimizando estrategias y acompañando su crecimiento en el mercado digital.",
     "contact": "juanperez@example.com",
     "whatsapp": "+5491123456789", 
+    "url_paginas" : "https://fr-pinamar.netlify.app/",
     "images": [
      "https://firebasestorage.googleapis.com/v0/b/cofolios-app.appspot.com/o/Microsoft%20Files%2FThumbnails%2FCandy%20Wang.jpg?alt=media&token=3430adb3-20df-4faf-aef5-caf89b69ceb8",
      "https://firebasestorage.googleapis.com/v0/b/cofolios-app.appspot.com/o/meta-portfolios%2Fthumbnails%2Faidentoole_thumbnail.jpg?alt=media&token=b354eca0-2150-4932-8916-1337b961e672",
@@ -495,6 +506,7 @@
     "about": "Soy un profesional con más de 10 años de experiencia en marketing digital y desarrollo web. He trabajado con empresas globales para potenciar su presencia online, optimizando estrategias y acompañando su crecimiento en el mercado digital.",
     "contact": "juanperez@example.com",
     "whatsapp": "+5491123456789", 
+    "url_paginas" : "https://fr-pinamar.netlify.app/",
     "images": [
      "https://firebasestorage.googleapis.com/v0/b/cofolios-app.appspot.com/o/Microsoft%20Files%2FThumbnails%2FCandy%20Wang.jpg?alt=media&token=3430adb3-20df-4faf-aef5-caf89b69ceb8",
      "https://firebasestorage.googleapis.com/v0/b/cofolios-app.appspot.com/o/meta-portfolios%2Fthumbnails%2Faidentoole_thumbnail.jpg?alt=media&token=b354eca0-2150-4932-8916-1337b961e672",
@@ -539,6 +551,7 @@
     "about": "Soy un profesional con más de 10 años de experiencia en marketing digital y desarrollo web. He trabajado con empresas globales para potenciar su presencia online, optimizando estrategias y acompañando su crecimiento en el mercado digital.",
     "contact": "juanperez@example.com",
     "whatsapp": "+5491123456789", 
+    "url_paginas" : "https://fr-pinamar.netlify.app/",
     "images": [
       "https://firebasestorage.googleapis.com/v0/b/cofolios-app.appspot.com/o/meta-portfolios%2Fthumbnails%2Faidentoole_thumbnail.jpg?alt=media&token=b354eca0-2150-4932-8916-1337b961e672",
       "https://firebasestorage.googleapis.com/v0/b/cofolios-app.appspot.com/o/Curated%20Files%2FThumbnails%2FPaco%20Lui.jpg?alt=media&token=367ff8af-2fc9-42cc-aa93-64bbb2c14132",
@@ -583,6 +596,7 @@
     "about": "Soy un profesional con más de 10 años de experiencia en marketing digital y desarrollo web. He trabajado con empresas globales para potenciar su presencia online, optimizando estrategias y acompañando su crecimiento en el mercado digital.",
     "contact": "juanperez@example.com",
     "whatsapp": "+5491123456789", 
+    "url_paginas" : "https://fr-pinamar.netlify.app/",
     "images": [
       "https://firebasestorage.googleapis.com/v0/b/cofolios-app.appspot.com/o/meta-portfolios%2Fthumbnails%2Faidentoole_thumbnail.jpg?alt=media&token=b354eca0-2150-4932-8916-1337b961e672",
       "https://firebasestorage.googleapis.com/v0/b/cofolios-app.appspot.com/o/Curated%20Files%2FThumbnails%2FPaco%20Lui.jpg?alt=media&token=367ff8af-2fc9-42cc-aa93-64bbb2c14132",

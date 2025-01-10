@@ -31,7 +31,7 @@ const Cards = ({ universidad, limit = 0 }) => {
             <div
               className="profile-card"
               onClick={() => handleClick(persona.id)}
-              style={{ cursor: "pointer" }}
+              
             >
               <div className="banner">
                 <div className="banner-content">

@@ -31,7 +31,7 @@ const hero = () =>  {
           ))}
         </div> */}
 
-        <h1 className="title">Portfolios destacados por estudiantes</h1>
+        <h1 className="title">Portfolios y Agencias Universitarias</h1>
 
         <div className="subtitle">
           <span>Comparte y destacá los proyectos que impulsás desde tu facultad.</span>

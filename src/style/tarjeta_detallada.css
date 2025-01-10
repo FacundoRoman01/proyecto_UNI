@@ -55,16 +55,21 @@
 
 
 .website-link {
-  display: block;
-  color: #0046BE;
-  text-decoration: none;
-  margin-bottom: 24px;
-  font-size: 14px;
+  display: block; /* Hace que ocupe toda la línea como un bloque */
+  color: #0046BE; /* Azul para el texto */
+  text-decoration: none; /* Quita el subrayado */
+  margin-bottom: 24px; /* Espacio inferior */
+  font-size: 14px; /* Tamaño de fuente estándar */
+  font-weight: 500; /* Hace el texto un poco más destacado */
+  line-height: 1.5; /* Mejora la legibilidad */
+  cursor: pointer;
 }
 
 .website-link:hover {
-  text-decoration: underline;
+  text-decoration: underline; /* Subraya al pasar el cursor */
+  color: #003399; /* Un azul más oscuro al hacer hover */
 }
+
 
 .services-section {
   margin-bottom: 24px;

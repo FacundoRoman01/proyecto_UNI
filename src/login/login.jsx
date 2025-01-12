@@ -1,62 +1,68 @@
 import { useState } from "react";
-import { Link } from "react-router-dom"; // Para la navegación
-import "../style/login.css"; // Asegúrate de tener este archivo de estilos
+import { Link, useNavigate } from "react-router-dom";
+import "../style/login.css";
 import Header from "../components/header";
+import useAuth from "../hooks/useAuth"; // Importamos el hook
 
 const Login = () => {
+  const { login, error, loading } = useAuth(); // Usamos el hook para obtener la lógica
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const navigate = useNavigate();
 
-  const handleLogin = (e) => {
+  const handleLogin = async (e) => {
     e.preventDefault();
-    console.log("Iniciando sesión con:", { email, password });
-    // Aquí podrías manejar la lógica de autenticación
+    await login(email, password); // Llamamos al login del hook
+    if (!loading && !error) {
+      navigate("/dashboard"); // Redirigimos al dashboard si el login fue exitoso
+    }
   };
 
   return (
-   <>
-   <Header />
-    <div className="form-container">
-      <div className="form-left">
-        <h2>Inicio de Sesión</h2>
-        <form className="formulario" onSubmit={handleLogin}>
-          <div className="form-group">
-            <label htmlFor="email">Correo electrónico</label>
-            <input
-              type="email"
-              id="email"
-              name="email"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              required
-              placeholder="Ingresa tu correo electrónico"
-            />
-          </div>
+    <>
+      <Header />
+      <div className="form-container">
+        <div className="form-left">
+          <h2>Inicio de Sesión</h2>
+          <form className="formulario" onSubmit={handleLogin}>
+            <div className="form-group">
+              <label htmlFor="email">Correo electrónico</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                required
+                placeholder="Ingresa tu correo electrónico"
+              />
+            </div>
 
-          <div className="form-group">
-            <label htmlFor="password">Contraseña</label>
-            <input
-              type="password"
-              id="password"
-              name="password"
-              value={password}
-              onChange={(e) => setPassword(e.target.value)}
-              required
-              placeholder="Ingresa tu contraseña"
-            />
-          </div>
+            <div className="form-group">
+              <label htmlFor="password">Contraseña</label>
+              <input
+                type="password"
+                id="password"
+                name="password"
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
+                required
+                placeholder="Ingresa tu contraseña"
+              />
+            </div>
 
-          <button type="submit" className="btn-submit">
-            Iniciar Sesión
-          </button>
+            <button type="submit" className="btn-submit">
+              {loading ? "Cargando..." : "Iniciar Sesión"}
+            </button>
 
-          <div className="form-link">
-            <p>¿No tienes una cuenta? <Link to="/registro">Regístrate aquí</Link></p>
-          </div>
-        </form>
+            {error && <p className="error">{error.message}</p>} {/* Mostrar error en caso de que ocurra */}
+            <div className="form-link">
+              <p>¿No tienes una cuenta? <Link to="/registro">Regístrate aquí</Link></p>
+            </div>
+          </form>
+        </div>
       </div>
-    </div>
-   </>
+    </>
   );
 };
 

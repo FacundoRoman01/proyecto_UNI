@@ -1,19 +1,29 @@
 import { useState } from "react";
-import { Link } from "react-router-dom"; // Importa Link
+import { Link, useNavigate } from "react-router-dom";
 import "../style/registro.css";
+import useAuth from "../hooks/useAuth"; // Importamos el hook
 
 const Register = () => {
-  // Estado para los campos del formulario
+  const { register, error, loading } = useAuth(); // Usamos el hook
   const [fullName, setFullName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [accountType, setAccountType] = useState("Freelancer");
+  const navigate = useNavigate();
+
+  const handleRegister = async (e) => {
+    e.preventDefault();
+    await register(fullName, email, password, accountType); // Llamamos al registro del hook
+    if (!loading && !error) {
+      navigate("/login"); // Redirigimos al login si el registro fue exitoso
+    }
+  };
 
   return (
     <div className="form-container">
       <div className="form-left">
         <h2>Formulario de Registro</h2>
-        <form className="formulario">
+        <form className="formulario" onSubmit={handleRegister}>
           <div className="form-group">
             <label htmlFor="fullName">Nombre completo</label>
             <input
@@ -68,8 +78,11 @@ const Register = () => {
           </div>
 
           <button type="submit" className="btn-submit">
-            Registrar
+            {loading ? "Cargando..." : "Registrar"}
           </button>
+
+          {error && <p className="error">{error.message}</p>} {/* Mostrar error en caso de que ocurra */}
+
           <div className="form-link">
             <p>¿Ya tienes una cuenta? <Link to="/login">Inicia sesión aquí</Link></p>
           </div>

@@ -1,6 +1,7 @@
 import "../style/tarjeta_detallada.css";
 import { Link, useNavigate } from "react-router-dom";
 import { FaEnvelope, FaWhatsapp } from 'react-icons/fa';  // Importar los iconos de react-icons
+import fotoprueba from "../img/fotos.jpg";
 
 const TarjetaDetallada = ({ persona }) => {
   const navigate = useNavigate(); // Hook para navegación programática
@@ -19,8 +20,10 @@ const TarjetaDetallada = ({ persona }) => {
       {/* Encabezado con logo e información */}
       <div className="profile-header">
         <img
-          src={persona.avatar} // Esto asegura que la ruta es correcta desde la raíz
+          src={fotoprueba} // Esto asegura que la ruta es correcta desde la raíz
           alt={persona.name}
+          className="avatar_tarjetaDetallada"
+          loading="lazy" 
         />
         <h1 className="company-title">{persona.name} - {persona.university}</h1>
       </div>

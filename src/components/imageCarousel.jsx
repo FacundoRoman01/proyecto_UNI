@@ -39,7 +39,8 @@ const ImageCarousel = ({ images }) => {
                 src={image}
                 alt={`Slide ${index + 1}`}
                 className="slide-image"
-                onClick={() => openModal(index)} // Abrir modal con la imagen seleccionada
+                onClick={() => openModal(index)}
+                loading="lazy"  // Abrir modal con la imagen seleccionada
               />
             </div>
           ))}

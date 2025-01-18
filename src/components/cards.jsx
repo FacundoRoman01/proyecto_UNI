@@ -35,12 +35,13 @@ const Cards = ({ universidad, limit = 0 }) => {
             >
               <div className="banner">
                 <div className="banner-content">
-                  <img src={persona.banner} alt="Banner" />
+                  <img src={persona.banner} alt="Banner" loading="lazy"  />
+                  
                 </div>
               </div>
               <div className="profile-info">
                 <div className="profile-avatar">
-                  <img src={persona.avatar} alt="Avatar" className="avatar" />
+                  <img src={persona.avatar} alt="Avatar" className="avatar" loading="lazy"  />
                 </div>
                 <div className="profile-details">
                   <h2>{persona.name}</h2>
@@ -51,6 +52,7 @@ const Cards = ({ universidad, limit = 0 }) => {
                     src={persona.companyLogo}
                     alt="Company Logo"
                     className="empresa-icon"
+                    loading="lazy" 
                   />
                 </div>
               </div>

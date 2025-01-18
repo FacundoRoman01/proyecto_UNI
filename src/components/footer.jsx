@@ -5,7 +5,7 @@ const footer = () => {
       <footer className="footer">
         <div className="footer-content">
           <div className="footer-section">
-            <h2>MOSTRALÓ</h2>
+            <h2>GoEstudi</h2>
             <p>Inspiración de portafolios de estudiantes que inician su carrera</p>
           </div>
   
@@ -20,7 +20,7 @@ const footer = () => {
           </div>
         </div>
   
-        <div className="footer-logo">MOSTRALÓ</div>
+        <div className="footer-logo">GoEstudi</div>
       </footer>
     );
   };

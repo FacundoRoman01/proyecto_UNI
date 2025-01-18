@@ -7,12 +7,12 @@ const HeroAbout = () => {
         <section className="heroContainer">
             <div className="contentSide">
                 <h1 className="title">
-                    Agencias Universitarias: Comparte tus Proyectos
+                    Comparte tus Proyectos:
                 </h1>
                 <p className="description">
-                    ¡Bienvenido a una comunidad de estudiantes.
-                    La plataforma está diseñada para ayudarte a <strong>potenciar tus proyectos</strong>,
-                    <strong> hacerte ver</strong> en el mundo académico y profesional. ¡Es tu oportunidad para mostrar tus ideas en realidades!
+                    Bienvenido a una comunidad creada para estudiantes como tú! Aquí puedes mostrar tu talento y creatividad, ya sea a través de portfolios individuales o proyectos en equipo. Si tú y tu grupo han formado una agencia o si trabajas en solitario, este es el espacio perfecto para compartir tus ideas, conectar con otros, y hacerte notar en el mundo académico y profesional.
+
+                    
                 </p>
                 {/* Envuelve el botón con Link para permitir la navegación */}
                 <Link to="/Registro">
@@ -26,6 +26,7 @@ const HeroAbout = () => {
                     src={heroAboutImg}
                     alt="Imagen representativa de proyectos universitarios colaborativos"
                     className="image"
+                    loading="lazy"
                 />
             </div>
         </section>

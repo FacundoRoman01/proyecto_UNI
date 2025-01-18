@@ -6,7 +6,7 @@ import AboutSection from "../components/aboutCard.jsx";
 // import Comments from "../components/comentariosUsuarios.jsx";
 import "../style/sectionDetalle.css";
 import Header from "../components/header";
-import TeamGroup from "../components/teamGroup.jsx";
+// import TeamGroup from "../components/teamGroup.jsx";
 import Footer from "../components/footer.jsx";
 const CardsDetalles = () => {
   const { id } = useParams();  // Obtiene el id de la URL
@@ -25,7 +25,7 @@ const CardsDetalles = () => {
             {/* Primera fila con ProfileCard y Carousel */}
             <div className="profile-card-column">
               <TarjetaDetallada persona={persona} /> {/* Pasa los datos de la persona a ProfileCard */}
-              <TeamGroup teamMembers={persona.teamMembers} /> 
+              {/* <TeamGroup teamMembers={persona.teamMembers} />  */}
             </div>
             <div className="carousel-column">
             <ImageCarousel images={persona.images} />

@@ -72,6 +72,7 @@ const Sidebar = ({ onFilterChange }) => {
                         alt={`${university} logo`}
                         width={40}
                         height={30}
+                        loading="lazy" 
                       />
                     )}
                   </div>

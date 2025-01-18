@@ -95,6 +95,13 @@
   color: #666;
 }
 
+.avatar_tarjetaDetallada{
+  width: 85px; /* Reducido el tamaño del avatar */
+  height: 85px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
 .contact-button {
   width: 100%;
   background: #0046BE;

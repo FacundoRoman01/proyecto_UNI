@@ -36,6 +36,24 @@
     flex-direction: column;
     gap: 32px;
   }
+
+  .image-display {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  background: #f9f9f9; /* Fondo claro por defecto */
+  padding: 20px;
+}
+
+.main-image {
+  width: 100%;
+  max-width: 800px;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
   
   /* Ajustes responsivos */
   @media (max-width: 767px) {

@@ -29,7 +29,7 @@ const Sidebar = ({ onFilterChange }) => {
       {/* Sidebar con visibilidad controlada */}
       <aside className={`sidebar ${showSidebar ? "show" : ""}`}>
         <div className="tabs">
-          <h4>Universidades</h4>
+          <h4>Instituciones Educativas</h4>
         </div>
 
         <div className="companies-list">
@@ -42,7 +42,7 @@ const Sidebar = ({ onFilterChange }) => {
               <div className="company-logo">
                 <FaUsers size={24} color="#6b7280" /> {/* Icono de universidad */}
               </div>
-              <span className="company-name">Todas las Universidades</span>
+              <span className="company-name">Todas las Instituciones</span>
             </div>
           </div>
 

@@ -1,86 +1,82 @@
-import "../style/sidebar.css";
-import personasData from "../../data/personas.json"; // Asume que el archivo JSON está en la carpeta 'data'
-
-// Importa Font Awesome
+import { useState, useEffect } from "react";
+import axios from "axios";
 import { FaUsers } from "react-icons/fa";
-import { useState } from "react";
+import "../style/sidebar.css";
 
 const Sidebar = ({ onFilterChange }) => {
-  // Estado para manejar la visibilidad del sidebar
+  const [universities, setUniversities] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
   const [showSidebar, setShowSidebar] = useState(false);
 
-  // Obtener las universidades únicas
-  const universities = [
-    ...new Set(personasData.map((prof) => prof.university)) // Filtrar las universidades únicas
-  ];
+  useEffect(() => {
+    const fetchUniversities = async () => {
+      try {
+        const response = await axios.get("http://localhost:8080/proyect_uni/back-end/api/get_universidades_usuarios.php");
+        setUniversities(response.data); // Establecer las universidades si la respuesta es exitosa
+      } catch (err) {
+        console.error("Error al obtener universidades", err);
 
-  // Función para alternar la visibilidad del sidebar
+        // Mostrar el mensaje de error específico
+        if (err.response) {
+          setError(`Error en el servidor: ${err.response.status} - ${err.response.statusText}`);
+        } else if (err.request) {
+          setError("Error al realizar la solicitud: No se pudo contactar con el servidor");
+        } else {
+          setError("Error desconocido: " + err.message);
+        }
+      } finally {
+        setLoading(false); // Deja de cargar independientemente del resultado
+      }
+    };
+
+    fetchUniversities();
+  }, []);
+
   const toggleSidebar = () => {
     setShowSidebar((prev) => !prev);
   };
 
   return (
     <>
-      {/* Botón para mostrar/ocultar el sidebar */}
       <button className="toggle-sidebar-button" onClick={toggleSidebar}>
         {showSidebar ? "Ocultar Universidades" : "Mostrar Universidades"}
       </button>
 
-      {/* Sidebar con visibilidad controlada */}
       <aside className={`sidebar ${showSidebar ? "show" : ""}`}>
         <div className="tabs">
           <h4>Instituciones Educativas</h4>
         </div>
 
         <div className="companies-list">
-          {/* Botón "Todas las Universidades" con un ícono */}
-          <div
-            className="company-item"
-            onClick={() => onFilterChange(null)} // Pasa null para mostrar todas las tarjetas
-          >
+          <div className="company-item" onClick={() => onFilterChange(null)}>
             <div className="company-info">
               <div className="company-logo">
-                <FaUsers size={24} color="#6b7280" /> {/* Icono de universidad */}
+                <FaUsers size={24} color="#6b7280" />
               </div>
               <span className="company-name">Todas las Instituciones</span>
             </div>
           </div>
 
-          {/* Mostrar universidades */}
-          {universities.map((university) => {
-            // Filtrar el logo de la universidad
-            const universityData = personasData.find(
-              (prof) => prof.university === university
-            );
-            const universityLogo = universityData
-              ? universityData.companyLogo
-              : null;
+          {loading && <p>Cargando universidades...</p>}
+          {error && <p className="error">{error}</p>}
 
-            return (
+          {!loading && !error && universities.length === 0 && (
+            <p>No hay universidades disponibles.</p>
+          )}
+
+          {!loading && !error && universities.length > 0 &&
+            universities.map((university, index) => (
               <div
-                key={university}
+                key={index}
                 className="company-item"
-                onClick={() => onFilterChange(university)} // Llamar a la función onFilterChange al seleccionar una universidad
+                onClick={() => onFilterChange(university)} // Aquí pasamos el nombre directamente
               >
                 <div className="company-info">
-                  <div className="company-logo">
-                    {/* Mostrar logo de la universidad */}
-                    {universityLogo && (
-                      <img
-                        className="Company_logoTipo"
-                        src={universityLogo} // Usar el logo de la universidad correspondiente
-                        alt={`${university} logo`}
-                        width={40}
-                        height={30}
-                        loading="lazy" 
-                      />
-                    )}
-                  </div>
-                  <span className="company-name">{university}</span>
+                  <span className="company-name">{university}</span> {/* Mostramos el nombre de la universidad */}
                 </div>
               </div>
-            );
-          })}
+            ))}
         </div>
       </aside>
     </>

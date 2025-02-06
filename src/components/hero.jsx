@@ -31,7 +31,7 @@ const hero = () =>  {
           ))}
         </div> */}
 
-        <h1 className="title">Portfolios y Agencias de Estudiantes</h1>
+        <h1 className="title">Portfolios y Branding de Estudiantes</h1>
 
         <div className="subtitle">
           <span>Explora y comparte los proyectos creados por estudiantes de diversas instituciones.</span>

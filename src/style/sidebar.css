@@ -1,40 +1,55 @@
+/* Sidebar en Desktop: altura 100vh */
 .sidebar {
-   
-    height: 100vh;
-    background-color: #ffffff;
-   
-    padding: 16px 0;
-    font-family: sans-serif;
-  }
-  
-  .tabs {
-    display: flex;
-    gap: 12px;
-    padding: 0 16px;
-    margin-bottom: 24px;
-  }
-  
-  .tab {
-    padding: 8px 16px;
-    border-radius: 9999px;
-    font-size: 14px;
-    font-weight: 500;
-    text-decoration: none;
-    color: #6b7280;
-    transition: all 0.2s ease;
-  }
-  
-  .tab:hover {
-    background-color: #f3f4f6;
-  }
-  
-  .tab.active {
-    background-color: #000000;
-    color: #ffffff;
+  height: 100vh;
+  background-color: #ffffff;
+  padding: 16px 0;
+  font-family: sans-serif;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Para dispositivos móviles, el sidebar no tiene altura 100vh */
+@media (max-width: 768px) {
+  .sidebar {
+    height: auto; /* O puedes ajustar la altura de acuerdo a tus necesidades en mobile */
+    display: none;
   }
 
-  /* Botón para alternar la visibilidad del sidebar */
-/* Estilo del botón */
+  .sidebar.show {
+    display: block;
+  }
+
+  .toggle-sidebar-button {
+    display: block;
+  }
+}
+  
+.tabs {
+  display: flex;
+  gap: 12px;
+  padding: 0 16px;
+  margin-bottom: 24px;
+}
+
+.tab {
+  padding: 8px 16px;
+  border-radius: 9999px;
+  font-size: 14px;
+  font-weight: 500;
+  text-decoration: none;
+  color: #6b7280;
+  transition: all 0.2s ease;
+}
+
+.tab:hover {
+  background-color: #f3f4f6;
+}
+
+.tab.active {
+  background-color: #000000;
+  color: #ffffff;
+}
+
+/* Botón para alternar la visibilidad del sidebar */
 .toggle-sidebar-button {
   display: none; /* Ocultamos el botón por defecto */
   background-color: #0046BE;
@@ -52,69 +67,64 @@
   background-color: #014dd1;
 }
 
-/* Sidebar oculto (en modo mobile puede estar como un slide) */
-.sidebar {
-  transition: all 0.3s ease-in-out;
+.companies-list {
+  display: flex;
+  flex-direction: column;
 }
 
-  
-  .companies-list {
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .company-item {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 8px 16px;
-    text-decoration: none;
-    color: #374151;
-    transition: background-color 0.2s ease;
-    cursor: pointer;
-  }
-  
-  .company-item:hover {
-    background-color: #f3f4f6;
-  }
-  
-  .company-info {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-  }
-  
-  .company-logo {
-    width: 24px;
-    height: 24px;
-    background-color: #f3f4f6;
-    border-radius: 4px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  .Company_logoTipo{
-    border-radius: 50px;
-    opacity: 0.8;
-  }
-  
-  .company-name {
-    font-size: 14px;
-    font-weight: 500;
-    color: #374151;
-    transition: color 0.3s ease;
-  }
-  
-  .company-count {
-    font-size: 14px;
-    color: #9ca3af;
-  }
-  
-  .company-item:hover .company-name {
-    color: #111827;
-  }
-  
-  /* Mostrar el botón en pantallas pequeñas (modo móvil) */
+.company-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 16px;
+  text-decoration: none;
+  color: #374151;
+  transition: background-color 0.2s ease;
+  cursor: pointer;
+}
+
+.company-item:hover {
+  background-color: #f3f4f6;
+}
+
+.company-info {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.company-logo {
+  width: 24px;
+  height: 24px;
+  background-color: #f3f4f6;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.Company_logoTipo {
+  border-radius: 50px;
+  opacity: 0.8;
+}
+
+.company-name {
+  font-size: 14px;
+  font-weight: 500;
+  color: #374151;
+  transition: color 0.3s ease;
+}
+
+.company-count {
+  font-size: 14px;
+  color: #9ca3af;
+}
+
+.company-item:hover .company-name {
+  color: #111827;
+}
+
+/* Mostrar el botón en pantallas pequeñas (modo móvil) */
 @media (max-width: 768px) {
   .toggle-sidebar-button {
     display: block;
@@ -127,10 +137,7 @@
   .sidebar.show {
     display: block;
   }
+  .company-name {
+    font-size: 18px;
+  }
 }
-
-/* Transiciones suaves para el sidebar */
-.sidebar {
-  transition: all 0.3s ease-in-out;
-}
-  

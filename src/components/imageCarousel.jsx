@@ -1,9 +1,47 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import axios from "axios";
 import "../style/imageCarousel.css";
 
-const ImageCarousel = ({ images }) => {
+const ImageCarousel = ({ userId }) => {
+  const [images, setImages] = useState([]);
+  const [loading, setLoading] = useState(true);  // Agregado estado de carga
+  const [error, setError] = useState(null);  // Agregado estado de error
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isModalOpen, setIsModalOpen] = useState(false);
+
+  useEffect(() => {
+    const fetchUserData = async () => {
+      try {
+        console.log("User ID recibido en ImageCarousel:", userId);
+
+        const response = await axios.get(
+          `http://localhost:8080/proyect_uni/back-end/api/user.php?id=${userId}`
+        );
+
+        console.log("Datos recibidos:", response.data);
+
+        if (response.data && response.data.images) {
+          setImages(response.data.images);
+        } else {
+          console.log("No se encontraron imágenes para este usuario.");
+          setImages([]);  // Asegura que 'images' esté vacío si no hay imágenes
+        }
+      } catch (error) {
+        console.error("Error cargando imágenes:", error);
+        setError("Error al cargar las imágenes.");
+      } finally {
+        setLoading(false);  // Marca la carga como completada
+      }
+    };
+
+    if (userId) {
+      fetchUserData();
+    } else {
+      console.warn("userId es inválido:", userId);
+      setError("userId no válido.");
+      setLoading(false);
+    }
+  }, [userId]);
 
   const handlePrev = () => {
     setCurrentIndex((prevIndex) =>
@@ -26,6 +64,14 @@ const ImageCarousel = ({ images }) => {
     setIsModalOpen(false);
   };
 
+  if (loading) {
+    return <p>Cargando imágenes...</p>; // Mostrar un mensaje de carga
+  }
+
+  if (error) {
+    return <p>{error}</p>; // Si hay error, mostrarlo
+  }
+
   return (
     <div className="carousel">
       <div className="carousel-container">
@@ -33,17 +79,21 @@ const ImageCarousel = ({ images }) => {
           className="slides"
           style={{ transform: `translateX(-${currentIndex * 100}%)` }}
         >
-          {images.map((image, index) => (
-            <div className="slide" key={index}>
-              <img
-                src={image}
-                alt={`Slide ${index + 1}`}
-                className="slide-image"
-                onClick={() => openModal(index)}
-                loading="lazy"  // Abrir modal con la imagen seleccionada
-              />
-            </div>
-          ))}
+          {images.length > 0 ? (
+            images.map((image, index) => (
+              <div className="slide" key={index}>
+                <img
+                  src={`/${image}`}
+                  alt={`Imagen ${index}`}
+                  className="slide-image"
+                  onClick={() => openModal(index)} // Abrir modal al hacer clic
+                  loading="lazy"
+                />
+              </div>
+            ))
+          ) : (
+            <p>No hay imágenes disponibles.</p>
+          )}
         </div>
         <button className="nav-button prev" onClick={handlePrev}>
           ❮
@@ -57,8 +107,8 @@ const ImageCarousel = ({ images }) => {
       {isModalOpen && (
         <div className="modal-overlay" onClick={closeModal}>
           <img
-            src={images[currentIndex]}
-            alt={`Slide ${currentIndex + 1}`}
+            src={`/${images[currentIndex]}`}
+            alt={`Imagen ${currentIndex}`}
             className="modal-image"
           />
         </div>

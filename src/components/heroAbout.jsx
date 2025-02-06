@@ -1,5 +1,5 @@
 import "../style/heroAbout.css";
-import heroAboutImg from "../img/registro_foto.png";
+import heroAboutImg from "../../public/assets/img/registro_foto.png";
 import { Link } from "react-router-dom"; // Importa Link de react-router-dom
 
 const HeroAbout = () => {
@@ -10,9 +10,11 @@ const HeroAbout = () => {
                     Comparte tus Proyectos:
                 </h1>
                 <p className="description">
-                    Bienvenido a una comunidad creada para estudiantes como tú! Aquí puedes mostrar tu talento y creatividad, ya sea a través de portfolios individuales o proyectos en equipo. Si tú y tu grupo han formado una agencia o si trabajas en solitario, este es el espacio perfecto para compartir tus ideas, conectar con otros, y hacerte notar en el mundo académico y profesional.
+                    Bienvenido a una comunidad creada para estudiantes como tú. Aquí puedes mostrar tu talento y creatividad a través de portfolios de desarrollo, diseño UX/UI, branding, ilustración y mucho más.
 
-                    
+                    Publica tus proyectos, conecta con otros profesionales en formación y haz que tu trabajo se destaque en el mundo académico y profesional.
+
+
                 </p>
                 {/* Envuelve el botón con Link para permitir la navegación */}
                 <Link to="/Registro">

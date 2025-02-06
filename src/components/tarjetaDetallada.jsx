@@ -1,11 +1,8 @@
 import "../style/tarjeta_detallada.css";
-import { Link, useNavigate } from "react-router-dom";
 import { FaEnvelope, FaWhatsapp } from 'react-icons/fa';  // Importar los iconos de react-icons
-import fotoprueba from "../img/fotos.jpg";
+// import fotoprueba from "../../public/assets/img/avatar1.png";
 
 const TarjetaDetallada = ({ persona }) => {
-  const navigate = useNavigate(); // Hook para navegación programática
-
   // Función para manejar el contacto
   const handleContactClick = (method) => {
     if (method === "email") {
@@ -19,12 +16,12 @@ const TarjetaDetallada = ({ persona }) => {
     <div className="profile-tarjeta">
       {/* Encabezado con logo e información */}
       <div className="profile-header">
-        <img
-          src={fotoprueba} // Esto asegura que la ruta es correcta desde la raíz
+        {/* <img
+          src={persona.avatar}// Esto asegura que la ruta es correcta desde la raíz
           alt={persona.name}
           className="avatar_tarjetaDetallada"
           loading="lazy" 
-        />
+        /> */}
         <h1 className="company-title">{persona.name} - {persona.university}</h1>
       </div>
 
@@ -34,15 +31,21 @@ const TarjetaDetallada = ({ persona }) => {
           Visita la página
         </a>
       </div>
+
       {/* Servicios */}
       <div className="services-section">
         <h2>Servicios:</h2>
         <div className="service-tags">
-          {persona.services.map((servicio, index) => (
-            <span key={index} className="tag">
-              {servicio}
-            </span>
-          ))}
+          {/* Verificación si persona.services es un array antes de hacer .map() */}
+          {Array.isArray(persona.services) && persona.services.length > 0 ? (
+            persona.services.map((servicio, index) => (
+              <span key={index} className="tag">
+                {servicio}
+              </span>
+            ))
+          ) : (
+            <p>No hay servicios disponibles</p> // Mensaje en caso de no tener servicios
+          )}
         </div>
       </div>
 

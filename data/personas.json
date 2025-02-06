@@ -12,7 +12,7 @@
     "whatsapp": "+5491123456789",
     "url_paginas" : "https://facundoroman.netlify.app/?fbclid=PAZXh0bgNhZW0CMTEAAabYtAi3Ap5KHBjWW4RDfTQ32B_U0SFZoLqW4DglBp4JHbWPBE-NH6Q6pTE_aem_CNtnxxIUKdCKl564pcmPyg",
     "images": [
-      "https://media.graphassets.com/qdEVLG6R7S0MlpEIvizw"
+      "../src/img/facumg.jpg"
     ],
     "teamMembers": [
   
@@ -105,13 +105,13 @@
     "teamMembers": [
       {
         "name_indi_group": "Juan Pérez",
-        "avatar_indi_group_img": "https://i.pravatar.cc/150?img=1",
+        "avatar_indi_group_img": "../src/img/avatar1.png",
         "instagram_indi_group": "https://instagram.com/juanperez",
          "linkedin_indi_group": "https://linkedin.com/in/juanperez"
       },
       {
         "name_indi_group": "María González",
-        "avatar_indi_group_img": "https://i.pravatar.cc/150?img=2",
+        "avatar_indi_group_img": "../src/img/avatar1.png",
         "instagram_indi_group": "https://instagram.com/mariagonzalez",
          "linkedin_indi_group": "https://linkedin.com/in/juanperez"
       },
@@ -134,7 +134,7 @@
     "name": "Laura Martinez",
     "university": "SanAndrés",
     "avatar": "src/img/avatar1.png",
-    "banner": "src/img/banner5.jpg",
+    "banner": "src/img/captura.png",
     "companyLogo": "src/img/sanAndres.png",
     "services": ["Marketing Online", "Software", "Analista en sistemas"],
     "about": "Líder en el desarrollo e integración de soluciones de software para eCommerce. Aplico estrategias innovadoras que permiten ahorrar hasta un 80% del tiempo de gestión y potenciar negocios digitales de manera integral.",
@@ -566,30 +566,7 @@
       "https://firebasestorage.googleapis.com/v0/b/cofolios-app.appspot.com/o/Meta%20Files%2FThumbnails%2FLeah%20Lee.jpg?alt=media&token=b430df40-7211-49e4-8072-81e6a1c2f5ba"
     ],
     "teamMembers": [
-      {
-        "name_indi_group": "Juan Pérez",
-        "avatar_indi_group_img": "https://i.pravatar.cc/150?img=1",
-        "instagram_indi_group": "https://instagram.com/juanperez",
-         "linkedin_indi_group": "https://linkedin.com/in/juanperez"
-      },
-      {
-        "name_indi_group": "María González",
-        "avatar_indi_group_img": "https://i.pravatar.cc/150?img=2",
-        "instagram_indi_group": "https://instagram.com/mariagonzalez",
-         "linkedin_indi_group": "https://linkedin.com/in/juanperez"
-      },
-      {
-        "name_indi_group": "Luis Sánchez",
-        "avatar_indi_group_img": "https://i.pravatar.cc/150?img=3",
-        "instagram_indi_group": "https://instagram.com/luissanchez",
-         "linkedin_indi_group": "https://linkedin.com/in/juanperez"
-      },
-      {
-        "name_indi_group": "Ana López",
-        "avatar_indi_group_img": "https://i.pravatar.cc/150?img=4",
-        "instagram_indi_group": "https://instagram.com/analopez",
-         "linkedin_indi_group": "https://linkedin.com/in/juanperez"
-      }
+
     ]
   }
 

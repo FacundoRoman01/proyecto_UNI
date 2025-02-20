@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom"; // Importar useNavigate
 import "../style/login.css";
 import Header from "../components/header";
 import useAuth from "../hooks/useAuth"; // Importamos el hook
@@ -8,15 +8,26 @@ const Login = () => {
   const { login, error, loading } = useAuth(); // Usamos el hook para obtener la lógica
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const navigate = useNavigate();
+  const navigate = useNavigate(); // Inicializar el hook de navegación
 
   const handleLogin = async (e) => {
     e.preventDefault();
-    await login(email, password); // Llamamos al login del hook
-    if (!loading && !error) {
-      navigate("/dashboard"); // Redirigimos al dashboard si el login fue exitoso
+    console.log("Email:", email, "Password:", password); // Asegurar que los valores sean correctos
+    const result = await login(email, password);
+    console.log("¿Login exitoso?", result.success);
+  
+    if (result.success && result.redirect) {
+      console.log("Redirigiendo a:", result.redirect);
+  
+      // Aquí puedes almacenar el nombre del usuario (o cualquier otro dato relevante) en localStorage
+      localStorage.setItem("name", result.userName); // Asegúrate de que `userName` venga del resultado del login
+  
+      // Redirigir a la ruta que se recibe del backend
+      navigate(`/${result.redirect.toLowerCase()}`);
     }
   };
+  
+  
 
   return (
     <>
@@ -35,6 +46,7 @@ const Login = () => {
                 onChange={(e) => setEmail(e.target.value)}
                 required
                 placeholder="Ingresa tu correo electrónico"
+                aria-label="Correo electrónico"
               />
             </div>
 
@@ -48,14 +60,15 @@ const Login = () => {
                 onChange={(e) => setPassword(e.target.value)}
                 required
                 placeholder="Ingresa tu contraseña"
+                aria-label="Contraseña"
               />
             </div>
 
-            <button type="submit" className="btn-submit">
+            <button type="submit" className="btn-submit" disabled={loading}>
               {loading ? "Cargando..." : "Iniciar Sesión"}
             </button>
 
-            {error && <p className="error">{error.message}</p>} {/* Mostrar error en caso de que ocurra */}
+            {error && <p className="error">{error}</p>} {/* Mostramos el error sin `.message` */}
             <div className="form-link">
               <p>¿No tienes una cuenta? <Link to="/registro">Regístrate aquí</Link></p>
             </div>

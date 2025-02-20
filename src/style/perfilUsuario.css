@@ -1,0 +1,93 @@
+.perfilUsuario-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    max-width: 800px;
+    margin: auto;
+  }
+  
+  .perfilUsuario-info {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    text-align: center;
+  }
+  
+  .perfilUsuario-avatar {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 10px;
+  }
+  
+  .perfilUsuario-banner {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .perfilUsuario-companylogo {
+    max-width: 100px;
+    max-height: 50px;
+  }
+  
+  .perfilUsuario-form {
+    background: #f8f8f8;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    margin-top: 20px;
+  }
+  
+  .perfilUsuario-form form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .perfilUsuario-form input,
+  .perfilUsuario-form textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
+  
+  .logout-button {
+    background: #e74c3c;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .logout-button:hover {
+    background: #c0392b;
+  }
+  
+  /* Responsividad */
+  @media (max-width: 600px) {
+    .perfilUsuario-container {
+      width: 95%;
+    }
+  
+    .perfilUsuario-avatar {
+      width: 100px;
+      height: 100px;
+    }
+  
+    .perfilUsuario-companylogo {
+      width: 60px;
+      height: 60px;
+    }
+  }
+  

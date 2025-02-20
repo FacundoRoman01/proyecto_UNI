@@ -1,70 +1,96 @@
 import { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import axios from "axios";
 
-// Este hook maneja la autenticación y el estado del usuario
+const API_URL = "http://localhost:8080/proyect_uni/back-end/api";
+
 const useAuth = () => {
-  const [user, setUser] = useState(null); // Estado para guardar los datos del usuario
-  const [loading, setLoading] = useState(true); // Para saber si estamos cargando la sesión
-  const [error, setError] = useState(null); // Para manejar errores
+  const [user, setUser] = useState(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
+  const navigate = useNavigate();
 
+  // Verificar si el usuario está autenticado al cargar la página
   useEffect(() => {
-    // Al cargar el componente, intentamos recuperar la sesión del usuario si existe un token
-    const token = localStorage.getItem("token");
-
-    if (token) {
-      axios
-        .get("http://localhost:5000/api/verifyToken", { headers: { Authorization: `Bearer ${token}` } })
-        .then((response) => {
-          setUser(response.data.user);
-          setLoading(false);
-        })
-        .catch((error) => {
-          setError(error);
-          setLoading(false);
-        });
-    } else {
-      setLoading(false); // Si no hay token, no hace falta verificar nada
-    }
+    axios
+      .get(`${API_URL}/user.php`, { withCredentials: true })
+      .then(({ data }) => setUser(data.success ? data.user : null))
+      .catch(() => setUser(null))
+      .finally(() => setLoading(false));
   }, []);
 
+  // Función auxiliar para manejar peticiones de autenticación (login y register)
+  const authRequest = async (endpoint, data) => {
+    setLoading(true);
+    setError(null);
+    try {
+      const response = await axios.post(`${API_URL}/${endpoint}`, data, { withCredentials: true });
+      console.log("Respuesta completa:", response.data); // Verifica la respuesta
+      if (response.data.success) {
+        setUser(response.data.user);
+        return response.data;
+      } else {
+        setError(response.data.message);
+        return false;
+      }
+    } catch (error) {
+      setError(error.response?.data?.message || "Error en el servidor");
+      return false;
+    } finally {
+      setLoading(false);
+    }
+  };
+  
+  
+
+  // Función para iniciar sesión
   const login = async (email, password) => {
-    try {
-      const response = await axios.post("http://localhost:5000/api/login", { email, password });
-      if (response.status === 200) {
-        localStorage.setItem("token", response.data.token); // Guardamos el token
-        setUser(response.data.user); // Establecemos el usuario logueado
+    const success = await authRequest("login.php", { email, password });
+    console.log("¿Login exitoso?", success);
+  
+    if (success && success.redirect && success.user) {
+      console.log("Redirigiendo a:", success.redirect);
+  
+      // Asegurarse de que success.user.id existe antes de guardarlo en localStorage
+      if (success.user.id) {
+        localStorage.setItem('userId', success.user.id);
+      } else {
+        console.error("Error: La respuesta del servidor no contiene un ID de usuario.");
       }
-    } catch (error) {
-      setError(error);
+  
+      navigate(`/${success.redirect}`, { replace: true });
+    } else {
+      console.error("Error: La respuesta del servidor no tiene los datos esperados.");
     }
+  
+    return success;
+  };
+  
+
+  // Función para registrar un usuario
+  const register = async (fullName, email, password, phone) => {
+    return await authRequest("register.php", { fullName, email, password, phone });
   };
 
-  const register = async (fullName, email, password, accountType) => {
+  // Función para cerrar sesión
+  const logout = async () => {
+    setLoading(true);
     try {
-      const response = await axios.post("http://localhost:5000/api/register", {
-        fullName,
-        email,
-        password,
-        accountType,
-      });
-      if (response.status === 200) {
-        localStorage.setItem("token", response.data.token); // Guardamos el token
-        setUser(response.data.user); // Establecemos el usuario logueado
-      }
+      await axios.get(`${API_URL}/logout.php`, { withCredentials: true });
+      setUser(null);
+      if (window.location.pathname !== "/login") navigate("/login"); // Evita redirección innecesaria
     } catch (error) {
-      setError(error);
+      console.error("Error cerrando sesión", error);
+    } finally {
+      setLoading(false);
     }
-  };
-
-  const logout = () => {
-    localStorage.removeItem("token");
-    setUser(null);
   };
 
   return {
     user,
     loading,
     error,
+    isAuthenticated: !!user,
     login,
     register,
     logout,

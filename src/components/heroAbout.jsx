@@ -12,7 +12,7 @@ const HeroAbout = () => {
                 <p className="description">
                     Bienvenido a una comunidad creada para estudiantes como tú. Aquí puedes mostrar tu talento y creatividad a través de portfolios de desarrollo, diseño UX/UI, branding, ilustración y mucho más.
 
-                    Publica tus proyectos, conecta con otros profesionales en formación y haz que tu trabajo se destaque en el mundo académico y profesional.
+                    Publica tus proyectos, conecta con otros estudiantes en formación y haz que tu trabajo se destaque en el mundo académico y profesional.
 
 
                 </p>

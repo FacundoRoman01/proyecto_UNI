@@ -52,6 +52,33 @@
   color: #c5c2bf;
 }
 
+/* Estilo para el enlace de "Mi Perfil" */
+.mi_perfil {
+  font-size: 1rem; /* Tamaño de fuente */
+  color: #333; /* Color del texto */
+  text-decoration: none; /* Quitar el subrayado */
+  padding: 0.5rem 1rem; /* Espaciado interior */
+  border-radius: 5px; /* Bordes redondeados */
+  transition: background-color 0.3s ease, color 0.3s ease; /* Transición para hover */
+}
+
+/* Hover para cambiar color de fondo y texto */
+.mi_perfil:hover {
+  background-color: #007BFF; /* Color de fondo cuando se pasa el ratón */
+  color: #fff; /* Color del texto cuando se pasa el ratón */
+}
+
+/* Estilo especial para el enlace de "Mi Perfil" */
+.mi_perfil.active {
+  font-weight: bold; /* Resaltar con negrita si está activo */
+  color: #007BFF; /* Cambiar color del texto si está activo */
+}
+
+.mi_perfil:focus {
+  outline: none; /* Quitar borde cuando el enlace recibe foco */
+}
+
+
 .register-btn {
   background-color: #fff; /* Fondo blanco */
   color: #0046BE !important; /* Letras azules */
@@ -67,6 +94,10 @@
   background-color: #0046BE; 
   color: #fff; 
 } */
+
+
+/*iniciar sesion*/
+
 
 
 /* Modo responsive para mobile */

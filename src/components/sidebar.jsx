@@ -40,7 +40,7 @@ const Sidebar = ({ onFilterChange }) => {
   return (
     <>
       <button className="toggle-sidebar-button" onClick={toggleSidebar}>
-        {showSidebar ? "Ocultar Universidades" : "Mostrar Universidades"}
+        {showSidebar ? "Ocultar Institutos" : "Mostrar Institutos"}
       </button>
 
       <aside className={`sidebar ${showSidebar ? "show" : ""}`}>

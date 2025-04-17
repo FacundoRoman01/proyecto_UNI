@@ -34,7 +34,7 @@ const TarjetaDetallada = ({ persona }) => {
 
       {/* Servicios */}
       <div className="services-section">
-        <h2>Servicios:</h2>
+        <h2>Habilidades del estudiante:</h2>
         <div className="service-tags">
           {/* Verificación si persona.services es un array antes de hacer .map() */}
           {Array.isArray(persona.services) && persona.services.length > 0 ? (
@@ -44,7 +44,7 @@ const TarjetaDetallada = ({ persona }) => {
               </span>
             ))
           ) : (
-            <p>No hay servicios disponibles</p> // Mensaje en caso de no tener servicios
+            <p>No hay Habilidades disponibles</p> // Mensaje en caso de no tener servicios
           )}
         </div>
       </div>

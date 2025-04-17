@@ -41,9 +41,9 @@ const Header = () => {
       </button>
       <nav className={`header__nav ${isMenuOpen ? "open" : ""}`}>
         <ul className="header__menu">
-          <li><Link to="/portfolio" onClick={() => setIsMenuOpen(false)}>Portfolios</Link></li>
-          <li><Link title="En desarrollo" onClick={() => setIsMenuOpen(false)}>Bolsa de Trabajo</Link></li>
-          <li><Link title="En desarrollo" onClick={() => setIsMenuOpen(false)}>Beneficios para Estudiantes</Link></li>
+          <li><Link to="/portfolio" onClick={() => setIsMenuOpen(false)}>Proyectos</Link></li>
+          <li><Link title="En desarrollo" onClick={() => setIsMenuOpen(false)}>Pasantias</Link></li>
+          {/* <li><Link title="En desarrollo" onClick={() => setIsMenuOpen(false)}>Beneficios para Estudiantes</Link></li> */}
 
           {/* Mostrar nombre del usuario si está logueado */}
           {userName ? (

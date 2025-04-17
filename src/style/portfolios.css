@@ -5,14 +5,18 @@
 } */
 
 /* Sidebar */
-.sidebar {
-  background-color: #f8f9fa; /* Color de fondo */
-  padding: 1rem; /* Ajuste de padding */
+/* .sidebar {
+  background-color: #f8f9fa; 
+  padding: 1rem; 
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  position: sticky; /* Hace que el sidebar se quede fijo al hacer scroll */
-  top: 0; /* Ajusta la posición cuando se hace scroll */
-}
+  position: sticky; 
+  top: 0; 
+  top: 0;
+  z-index: 1000; 
+  height: 100vh; 
+  overflow-y: auto;
+} */
 
 /* Contenedor de las Cards */
 .cards-container {
@@ -60,3 +64,7 @@
 .ver-mas-btn:hover {
   background-color: #0056b3;
 }
+
+/* .sectionPortolio-footer{
+
+} */

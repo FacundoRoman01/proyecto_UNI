@@ -1,4 +1,6 @@
 import axios from "axios";
+import { toast, Toaster } from 'sonner';
+
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import Header from "../components/header.jsx";
@@ -17,7 +19,9 @@ const PerfilUsuario = () => {
     companylogo: "",
     about: "",
     url_paginas: "",
+    services: "", // Nuevo campo para los servicios
   });
+
   const [avatarPreview, setAvatarPreview] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
@@ -70,13 +74,21 @@ const PerfilUsuario = () => {
     e.preventDefault();
     const formDataToSend = new FormData();
 
+    // Recorrer todos los campos de formData y agregarlos a formDataToSend
     Object.keys(formData).forEach((key) => {
       if (formData[key] && formData[key].length > 0) {
         if (key === "images") {
           Array.from(formData[key]).forEach((file) => {
             formDataToSend.append("images[]", file);
           });
-        } else {
+        } else if (key === "services") {
+          // Aseguramos que 'services' siempre sea una cadena
+          const servicesValue = typeof formData.services === 'string' ? formData.services : '';
+          const servicesArray = servicesValue.split(",").map((s) => s.trim());
+          formDataToSend.append("services", servicesArray.join(", "));
+        }
+
+        else {
           formDataToSend.append(key, formData[key]);
         }
       }
@@ -90,25 +102,29 @@ const PerfilUsuario = () => {
       });
 
       if (response.data.success) {
-        alert("Usuario actualizado con éxito");
+        toast.success("Usuario actualizado con éxito");
         navigate(`/detalle/${userId}`);
       } else {
-        alert(response.data.error || "Error al registrar usuario.");
+        toast.error(response.data.error || "Error al registrar usuario.");
       }
     } catch (error) {
+      toast.error("Error al registrar usuario.");
       setError("Error al registrar usuario.");
     }
   };
 
-//   const handleLogout = () => {
-//     localStorage.removeItem("userId");
-//     localStorage.removeItem("user");
-//     navigate("/login");
-//   };
+
+
+  //   const handleLogout = () => {
+  //     localStorage.removeItem("userId");
+  //     localStorage.removeItem("user");
+  //     navigate("/login");
+  //   };
 
   return (
     <div>
       <Header />
+      <Toaster position="top-right" />
       <div className="perfilUsuario-container">
         {loading ? (
           <p>Cargando...</p>
@@ -136,10 +152,34 @@ const PerfilUsuario = () => {
             <label>WhatsApp<input type="text" name="whatsapp" value={formData.whatsapp} onChange={handleChange} required /></label>
             <label>Avatar<input type="file" name="avatar" accept="image/*" onChange={handleChange} /></label>
             {avatarPreview && <img src={avatarPreview} alt="Vista previa" className="perfilUsuario-avatar-preview" />}
+            <label>Habilidades del estudiante (separados por comas)
+              <input
+                type="text"
+                name="services"
+                value={formData.services}
+                onChange={handleChange}
+                placeholder="Ej: Desarrollo web, Diseño UX, Marketing digital"
+                required
+              />
+            </label>
             <label>Banner<input type="file" name="banner" accept="image/*" onChange={handleChange} /></label>
             <label>Presentaciones<input type="file" name="images" multiple onChange={handleChange} /></label>
-            <label>Logo Empresa<input type="file" name="companylogo" accept="image/*" onChange={handleChange} /></label>
-            <label>Universidad<input type="text" name="university" value={formData.university} onChange={handleChange} required /></label>
+            <label>Logo Empresa<input type="file" name="companyLogo" accept="image/*" onChange={handleChange} /></label>
+            {/* luego ver esto y ajustarlo mucho mejor */}
+            <label htmlFor="university">Universidad:</label>
+            <select name="university" value={formData.university} onChange={handleChange} required>
+              <option value="">Seleccione una universidad</option>
+              <option value="Da Vinci">Da Vinci</option>
+              <option value="UADE">UADE</option>
+              <option value="ORT">ORT</option>
+              <option value="Belgrano">Belgrano</option>
+              <option value="SanAndrés">San Andrés</option>
+              <option value="UTN">UTN</option>
+              <option value="Kennedy">Kennedy</option>
+              <option value="Palermo">Palermo</option>
+              <option value="CoderHouse">CoderHouse</option>
+            </select>
+
             <label>Sobre mí<textarea name="about" value={formData.about} onChange={handleChange} required /></label>
             <label>URL páginas<input type="text" name="url_paginas" value={formData.url_paginas} onChange={handleChange} required /></label>
             <button type="submit">Agregar</button>

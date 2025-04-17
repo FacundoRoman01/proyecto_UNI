@@ -1,10 +1,15 @@
 /* Sidebar en Desktop: altura 100vh */
 .sidebar {
-  height: 100vh;
-  background-color: #ffffff;
-  padding: 16px 0;
-  font-family: sans-serif;
-  transition: all 0.3s ease-in-out;
+  background-color: #f8f9fa; /* Color de fondo */
+  padding: 1rem; /* Ajuste de padding */
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: sticky; /* Hace que el sidebar se quede fijo al hacer scroll */
+  top: 0; /* Ajusta la posición cuando se hace scroll */
+  top: 0;
+  z-index: 1000; /* Asegura que se quede encima del contenido */
+  height: 100vh; /* Asegura que ocupe toda la altura */
+  overflow-y: auto;
 }
 
 /* Para dispositivos móviles, el sidebar no tiene altura 100vh */

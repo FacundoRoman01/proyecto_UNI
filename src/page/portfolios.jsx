@@ -54,7 +54,9 @@ const Portfolios = () => {
           </div>
         </div>
       </section>
-      <Footer />
+      {/* <div className="sectionPortolio-footer">
+        <Footer />
+      </div> */}
     </>
   );
 };

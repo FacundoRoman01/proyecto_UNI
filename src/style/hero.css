@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
 
 
 
@@ -93,4 +93,103 @@
     }
   }
   
-  
+   */
+
+   /* Estilos generales */
+   @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+.hero {
+  position: relative;
+  background-color: #020B2D;
+  color: #fff;
+  padding: 100px 50px;
+  text-align: left;
+  overflow: hidden;
+}
+
+.hero-content {
+  max-width: 600px;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+  color: #ccc;
+}
+
+/* Botones */
+.hero-buttons {
+  display: flex;
+  gap: 15px;
+}
+
+.btn-primary {
+  background-color: #fff;
+  color: #111;
+  padding: 12px 20px;
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.btn-secondary {
+  background: none;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+}
+
+/* Imágenes flotantes */
+.floating-img {
+  position: absolute;
+  width: 250px;
+  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+}
+
+/* Posiciones de imágenes (ajusta según necesites) */
+.img1 {
+  top: 10%;
+  right: 25%;
+  transform: rotate(-10deg);
+}
+
+.img2 {
+  top: 50%;
+  right: 10%;
+  transform: rotate(15deg);
+}
+
+.img3 {
+  bottom: 10%;
+  right: 30%;
+  transform: rotate(-5deg);
+}
+
+.img4 {
+  bottom: 20%;
+  right: 5%;
+  transform: rotate(10deg);
+}
+
+.img5{
+  top: 10%;
+  right: 5%;
+  transform: rotate(-10deg);
+}
+
+.img6{
+  top: 25%;
+  right: 35%;
+  transform: rotate(-10deg);
+}

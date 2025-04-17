@@ -19,7 +19,7 @@ const HeroAbout = () => {
                 {/* Envuelve el botón con Link para permitir la navegación */}
                 <Link to="/Registro">
                     <button className="button">
-                        Publica tu Proyecto
+                        Unirme a la comunidad
                     </button>
                 </Link>
             </div>
